@@ -13,3 +13,10 @@ A div with the result calculated from the json
 Another h1 with comment about the result   
 
 A p for the final text
+
+# Summary
+An h1 at the top "Summary"
+
+Four components with the scores
+
+A button "Continue"
