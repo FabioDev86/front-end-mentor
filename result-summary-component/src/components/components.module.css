@@ -1,7 +1,38 @@
+/*RESULT COMPONENT*/
 .result{
     text-align: center;
+    background-color: hsl(241, 81%, 54%);
+    padding: 3rem;
+    width: 12rem;
+    border-radius: 10%;
+    color: white;
+}
+.result h2{
+    opacity: 0.5;
+    font-size: 1rem;
+}
+.number{
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 4rem;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;   
+    margin: auto;
+    line-height: 8rem;
+    
 }
 
+/*SUMMARY COMPONENT*/
 .summary{
-    
+    background-color: white;
+    padding: 3rem;
+    width: 12rem;
+    border-radius: 10%;
+}
+
+/*SCORE COMPONENT*/
+.score{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }

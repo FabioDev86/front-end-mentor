@@ -14,8 +14,10 @@ export default function Result(){
     //The component
     return (
         <div className={styles.result}>
-            <h1>Your result</h1>
-            <div> {result} </div>
+            <h2>Your result</h2>
+            <div className={styles.number}>
+                 {result}
+            </div>
             <h1>Great</h1>
             <p>You scored higher than 65% of the people who have taken the test</p>
         </div>
