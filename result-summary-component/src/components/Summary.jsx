@@ -7,7 +7,7 @@ export default function Summary(){
         <div className={styles.summary}>
             <h1>Summary</h1>
             {data.map((data) => {return(
-                <Score cat = {data.category} sco = {data.score} ico = {data.icon} />
+                <Score cat = {data.category} sco = {data.score} ico = {data.icon} id = {data.category.toLowerCase()} />
             );})}
             <button>Continue</button>
         </div>
