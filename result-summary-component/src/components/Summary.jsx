@@ -5,7 +5,7 @@ import Score from "./Score"
 export default function Summary(){
     return(
         <div className={styles.summary}>
-            <h1>Summary</h1>
+            <h3>Summary</h3>
             {data.map((data) => {return(
                 <Score cat = {data.category} sco = {data.score} ico = {data.icon} id = {data.category.toLowerCase()} />
             );})}

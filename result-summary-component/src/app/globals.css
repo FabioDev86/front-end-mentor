@@ -1,3 +1,12 @@
+#reaction {
+    background-color: hsla(0, 100%, 67%, 0.3);
+}
 #memory {
-    background-color: red;
+    background-color: hsla(39, 100%, 56%, 0.3);
+}
+#verbal {
+    background-color: hsla(166, 100%, 37%, 0.3);
+}
+#visual {
+    background-color: hsla(234, 85%, 45%, 0.3);
 }

@@ -3,7 +3,7 @@
     text-align: center;
     background-color: hsl(241, 81%, 54%);
     padding: 3rem;
-    width: 12rem;
+    width: 18rem;
     border-radius: 10%;
     color: white;
 }
@@ -26,16 +26,19 @@
 .summary{
     background-color: white;
     padding: 3rem;
-    width: 12rem;
+    width: 18rem;
     border-radius: 10%;
 }
+.summary > *{
+    margin: 0.5rem;
+}
+
 
 /*SCORE COMPONENT*/
 .score{
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-.memory {
-    background-color: blue;
+    border-radius: 10px;
+    width: 15rem;
 }
