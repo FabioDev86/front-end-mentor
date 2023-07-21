@@ -7,19 +7,29 @@
     height: 23rem;
     border-radius: 10%;
     color: white;
+    
+    z-index: 100;
+}
+@media screen and (min-width: 400px){
+    .result{
+        margin-right: -2rem;
+    }
 }
 .result h2{
     opacity: 0.5;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    
 }
 .number{
     background: rgba(0, 0, 0, 0.5);
+    margin-top: 5rem;
     font-size: 4rem;
+    font-weight: bold;
     border-radius: 50%;
-    width: 8rem;
-    height: 8rem;   
+    width: 12rem;
+    height: 12rem;   
     margin: auto;
-    line-height: 8rem;    
+    line-height: 12rem;    
 }
 
 /*SUMMARY COMPONENT*/
@@ -31,7 +41,7 @@
     border-radius: 10%;
     
 }
-@media screen and (min-width: 375px){
+@media screen and (min-width: 400px){
     .summary{
         filter: drop-shadow(1rem 1rem 1rem hsla(224, 30%, 27%, 0.6));
     }
