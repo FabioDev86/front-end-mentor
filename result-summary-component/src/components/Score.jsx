@@ -6,7 +6,7 @@ export default function Score(props){
         <div className={styles.score} id={props.id}>
             <Image src={props.ico} alt="icon" width={20} height={20}/>
             <p>{props.cat}</p>
-            <p>{props.sco}/100</p>
+            <p>{props.sco}<span>/100</span></p>
         </div>
     )
 }

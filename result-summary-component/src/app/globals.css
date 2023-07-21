@@ -1,12 +1,25 @@
+
 #reaction {
     background-color: hsla(0, 100%, 67%, 0.3);
+}
+#reaction>p:nth-child(2){
+    color: hsl(0, 100%, 67%);
 }
 #memory {
     background-color: hsla(39, 100%, 56%, 0.3);
 }
+#memory>p:nth-child(2){
+    color: hsl(39, 100%, 56%);
+}
 #verbal {
     background-color: hsla(166, 100%, 37%, 0.3);
 }
+#verbal>p:nth-child(2){
+    color: hsl(166, 100%, 37%);
+}
 #visual {
     background-color: hsla(234, 85%, 45%, 0.3);
+}
+#visual>p:nth-child(2){
+    color: hsl(234, 85%, 45%);
 }

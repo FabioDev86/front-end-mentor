@@ -18,8 +18,7 @@
     width: 8rem;
     height: 8rem;   
     margin: auto;
-    line-height: 8rem;
-    
+    line-height: 8rem;    
 }
 
 /*SUMMARY COMPONENT*/
@@ -38,7 +37,14 @@
 .score{
     display: flex;
     align-items: center;
+    justify-content: space-around;
     gap: 1rem;
     border-radius: 10px;
     width: 15rem;
+}
+.score span{
+    color: hsla(224, 30%, 27%, 0.6);
+}
+.score p{
+    font-weight: bold;
 }
