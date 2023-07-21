@@ -4,6 +4,7 @@
     background-color: hsl(241, 81%, 54%);
     padding: 3rem;
     width: 18rem;
+    height: 23rem;
     border-radius: 10%;
     color: white;
 }
@@ -24,14 +25,20 @@
 /*SUMMARY COMPONENT*/
 .summary{
     background-color: white;
-    padding: 3rem;
-    width: 18rem;
+    padding: 2rem;
+    width: 19rem;
+    height: 25rem;
     border-radius: 10%;
+    
+}
+@media screen and (min-width: 375px){
+    .summary{
+        filter: drop-shadow(1rem 1rem 1rem hsla(224, 30%, 27%, 0.6));
+    }
 }
 .summary > *{
-    margin: 0.5rem;
+    margin: 1rem;
 }
-
 
 /*SCORE COMPONENT*/
 .score{
@@ -40,11 +47,22 @@
     justify-content: space-around;
     gap: 1rem;
     border-radius: 10px;
-    width: 15rem;
+    width: 18rem;
 }
 .score span{
     color: hsla(224, 30%, 27%, 0.6);
 }
 .score p{
+    font-weight: bold;
+}
+
+/*BUTTON*/
+.summary>button{
+    background-color: hsl(224, 30%, 27%);
+    width: 18rem;
+    height: 3rem;
+    border-radius: 30px;
+    color: white;
+    font-size: large;
     font-weight: bold;
 }
