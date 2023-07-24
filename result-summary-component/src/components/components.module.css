@@ -6,11 +6,17 @@
     width: 18rem;
     height: 23rem;
     border-radius: 10%;
-    color: white;
-    
+    color: white;    
     z-index: 100;
 }
-@media screen and (min-width: 400px){
+@media screen and (max-width: 415px){
+    .result{
+        border-top-right-radius: 0 ;
+        border-top-left-radius: 0;
+        margin: 0;
+    }
+}
+@media screen and (min-width: 415px){
     .result{
         margin-right: -2rem;
     }
@@ -22,7 +28,6 @@
 }
 .number{
     background: rgba(0, 0, 0, 0.5);
-    margin-top: 5rem;
     font-size: 4rem;
     font-weight: bold;
     border-radius: 50%;
@@ -41,9 +46,15 @@
     border-radius: 10%;
     
 }
-@media screen and (min-width: 400px){
+@media screen and (min-width: 415px){
     .summary{
         filter: drop-shadow(1rem 1rem 1rem hsla(224, 30%, 27%, 0.6));
+    }
+}
+@media screen and (max-width: 415px){
+    .summary{
+        margin-left: 0 ;
+        margin-right: 0;
     }
 }
 .summary > *{

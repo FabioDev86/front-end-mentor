@@ -1,4 +1,7 @@
-
+html{
+    padding: 0;
+    margin: 0;
+}
 #reaction {
     background-color: hsla(0, 100%, 67%, 0.3);
 }
