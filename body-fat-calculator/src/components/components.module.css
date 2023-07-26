@@ -1,0 +1,9 @@
+.description {
+    background-image: linear-gradient(to left, #6CEFEF , rgb(255, 255, 255));
+    width: 25rem;
+    padding: 10rem 10rem 10rem 5rem;
+    border-bottom-right-radius: 20%;
+}
+.description h1 {
+    padding-bottom: 1rem;
+}
