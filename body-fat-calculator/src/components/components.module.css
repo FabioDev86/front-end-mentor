@@ -1,3 +1,4 @@
+/*DESCRIPTION COMPONENT*/
 .description {
     background-image: linear-gradient(to left, #6CEFEF , rgb(255, 255, 255));
     width: 25rem;
@@ -7,3 +8,5 @@
 .description h1 {
     padding-bottom: 1rem;
 }
+
+/*CALCULATOR COMPONENT*/

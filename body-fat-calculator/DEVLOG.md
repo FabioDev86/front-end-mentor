@@ -1,7 +1,7 @@
 # My development log
 
 ## 26 Lug 2023
-
+I've created and styled the Description component.  
 
 ## 25 Lug 2023
 I've created the app using create-next-app and pushed my first commit on GitHub
