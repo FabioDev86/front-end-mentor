@@ -7,6 +7,10 @@ export default function Data(){
     return(
         <div className={styles.mesurements}>
             <form>
+                <label htmlFor="male">Male</label>
+                <input type="radio" id="male" name="sex"/>
+                <label htmlFor="female">Female</label>
+                <input type="radio" id="female" name="sex"/>
                 <div>
                     <label htmlFor="age">Your age</label>
                     <input name="age" id="age" type="number" onChange={(e) => changeSpots({...spots, age: e.target.value})}/>

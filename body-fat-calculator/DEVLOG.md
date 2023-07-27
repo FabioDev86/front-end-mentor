@@ -15,3 +15,5 @@ There where some problems with the formula but now it is done. I forgot to consi
 two radio button for the choice. After that I will put the calculation in a handler function linked to the button.
 
 I decided to rename the Mesurements component into Data component.
+
+Ok, added the radio, next time I will add the female formula
