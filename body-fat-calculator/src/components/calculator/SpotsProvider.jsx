@@ -1,6 +1,7 @@
 import { createContext, useContext, useState} from "react";
 
 const SpotsContext = createContext({
+    age: 0,
     pectoral: 0,
     abdomen: 0,
     quadricep: 0
@@ -8,6 +9,7 @@ const SpotsContext = createContext({
 
 export function SpotsProvider({children}){
     const [spots, setSpots] = useState({
+        age : 0,
         pectoral: 0,
         abdomen: 0,
         quadricep: 0

@@ -8,6 +8,10 @@ export default function Mesurements(){
         <div className={styles.mesurements}>
             <form>
                 <div>
+                    <label htmlFor="age">Your age</label>
+                    <input name="age" type="number" onChange={(e) => changeSpots({...spots, age: e.target.value})}/>
+                </div>
+                <div>
                     <label htmlFor="pectoral">Pectoral</label>
                     <input name="pectoral" type="number" onChange={(e) => changeSpots({...spots, pectoral: e.target.value})}/>
                 </div>
