@@ -2,7 +2,7 @@
 
 import styles from "./components.module.css";
 import { SpotsProvider } from "./calculator/SpotsProvider";
-import Mesurements from "./calculator/Mesurements";
+import Data from "./calculator/Data";
 import Result from "./calculator/Result";
 
 
@@ -11,7 +11,7 @@ export default function Calculator(){
         <div className={styles.calculator}>
             <h1><span>?</span>Write your plicometry mesurements</h1>
             <SpotsProvider>
-                <Mesurements />
+                <Data />
                 <Result />
             </SpotsProvider>
         </div>

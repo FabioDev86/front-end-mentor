@@ -8,8 +8,6 @@ export default function Result(){
     return(
         <div>
            <h1>BF: {Math.ceil((495 / bodyDensity ) - 450)} % </h1>
-           <p>{sum}</p>
-
         </div>
     );
 }
