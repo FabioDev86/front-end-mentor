@@ -3,14 +3,14 @@ import { createContext, useContext, useState} from "react";
 const SpotsContext = createContext({
     pectoral: 0,
     abdomen: 0,
-    quadriceps: 0
+    quadricep: 0
 });
 
 export function SpotsProvider({children}){
     const [spots, setSpots] = useState({
         pectoral: 0,
         abdomen: 0,
-        quadriceps: 0
+        quadricep: 0
     });
     return (
         <SpotsContext.Provider 

@@ -1,11 +1,17 @@
+'use client'
+
 import styles from "./components.module.css";
+import { SpotsProvider } from "./calculator/SpotsProvider";
+import Mesurements from "./calculator/Mesurements";
 
 
 export default function Calculator(){
     return(
         <div className={styles.calculator}>
-            <span>?</span><h1>Write your plicometry mesurments</h1>
-
+            <h1><span>?</span>Write your plicometry mesurments</h1>
+            <SpotsProvider>
+                <Mesurements />
+            </SpotsProvider>
         </div>
     );
 }
