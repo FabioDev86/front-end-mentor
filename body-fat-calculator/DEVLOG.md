@@ -17,3 +17,9 @@ two radio button for the choice. After that I will put the calculation in a hand
 I decided to rename the Mesurements component into Data component.
 
 Ok, added the radio, next time I will add the female formula
+
+## 28 Jul 2023
+There is a problem. The female formula needs different spots. So the value from the rdio button should change 
+the input fields.
+
+First I changed the name of the ContextProvider from SpotsProvider to DataProvider. Then the name of the spots from {pectoral, abdomen, quadricep} to {spot1, spot2, spot3} so that they can be for either male or female.
