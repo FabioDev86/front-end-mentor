@@ -23,3 +23,5 @@ There is a problem. The female formula needs different spots. So the value from 
 the input fields.
 
 First I changed the name of the ContextProvider from SpotsProvider to DataProvider. Then the name of the spots from {pectoral, abdomen, quadricep} to {spot1, spot2, spot3} so that they can be for either male or female.
+
+Now I've to add the button
