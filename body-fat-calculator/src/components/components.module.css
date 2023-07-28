@@ -11,5 +11,21 @@
 
 /*CALCULATOR COMPONENT*/
 
-
+.calculator {
+    padding: 3rem;
+    margin: -7rem;
+    background-color: white;
+    border-radius: 15%;
+    filter: drop-shadow(10px 10px lightgray);
+}
+.calculator>h1 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+.calculator>h1>span {
+    background-color: #5A67E0;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50%;
+    margin-right: 1rem ;
+}
 
