@@ -4,12 +4,14 @@ import { useData } from "./DataProvider";
 export default function Data(){
     const {data, changeData} = useData();
     return(
-        <div className={styles.mesurements}>
+        <div className={styles.data}>
             <form>
-                <label htmlFor="male">Male</label>
-                <input type="radio" id="male" name="sex" value="m" onChange={(e) => changeData({...data, sex: e.target.value})}/>
-                <label htmlFor="female">Female</label>
-                <input type="radio" id="female" name="sex" value="f" onChange={(e) => changeData({...data, sex: e.target.value})}/>
+                <fieldset className={styles.gender}>
+                    <label htmlFor="male">Male</label>
+                    <input type="radio" id="male" name="sex" value="m" onChange={(e) => changeData({...data, sex: e.target.value})}/>
+                    <label htmlFor="female">Female</label>
+                    <input type="radio" id="female" name="sex" value="f" onChange={(e) => changeData({...data, sex: e.target.value})}/>
+                </fieldset>
                 <div>
                     <label htmlFor="age">Your age</label>
                     <input name="age" id="age" type="number" onChange={(e) => changeData({...data, age: e.target.value})}/>

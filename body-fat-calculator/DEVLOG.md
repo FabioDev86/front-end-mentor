@@ -25,3 +25,6 @@ the input fields.
 First I changed the name of the ContextProvider from SpotsProvider to DataProvider. Then the name of the spots from {pectoral, abdomen, quadricep} to {spot1, spot2, spot3} so that they can be for either male or female.
 
 Now that I've added the button I can focus on the styling. 
+
+## 31 Jul 2023
+Apparently, using div to group input element is a bad idea. Switching to fieldset.
