@@ -10,7 +10,8 @@ export default function Result(){
     
     return(
         <div className={styles.result}>
-           <h1>BF: <span>{result}%</span>  </h1>
+           <h1>BF: </h1>
+           <h1>{result+"%"}</h1>
            <button onClick={() => {setResult(Math.ceil((495 / bodyDensity ) - 450))}}>GO!</button>
         </div>
     );
