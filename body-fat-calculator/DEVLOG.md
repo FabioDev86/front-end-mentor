@@ -28,3 +28,6 @@ Now that I've added the button I can focus on the styling.
 
 ## 31 Jul 2023
 Apparently, using div to group radio buttons is a bad idea. Switching to fieldset.
+
+## 2 Aug 2023
+I've styled the button. Now I will focus on the mobile styling
