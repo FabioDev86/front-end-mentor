@@ -12,6 +12,13 @@
     width: 3rem;
     border: none;
     background-color: #6CEFEF;
+    font-weight: bolder;
+    text-align: center;
+}
+.data div input:focus {
+    border-color: #5A67E0;
+    background-color: #5A67E0;
+    color: white
 }
 @media screen and (max-width: 390px){
     .data form div {        
