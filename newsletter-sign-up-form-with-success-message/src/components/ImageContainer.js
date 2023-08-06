@@ -2,6 +2,7 @@
 
 import { useMediaQuery } from "react-responsive";
 import Image from "next/image";
+import  styles  from "./components.module.css" 
 
 const Desktop = ({ children }) => {
     const isDesktop = useMediaQuery({ minWidth: 400 })
@@ -14,7 +15,7 @@ const Mobile = ({ children }) => {
 
 export default function ImageContainer(){
     return(
-        <div>
+        <div className={styles.imageContainer}>
             <Desktop>
             <Image
                 src="/illustration-sign-up-desktop.svg"
