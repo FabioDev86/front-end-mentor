@@ -29,7 +29,7 @@ export default function ImageContainer(){
                     src="/illustration-sign-up-mobile.svg"
                     width={375}
                     height={284}
-                    alt="Picture of the author"
+                    alt="Sign up illustration"
                 />
             </Mobile>
 
