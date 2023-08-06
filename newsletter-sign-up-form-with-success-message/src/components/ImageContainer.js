@@ -32,7 +32,6 @@ export default function ImageContainer(){
                     alt="Sign up illustration"
                 />
             </Mobile>
-
         </div>
     );
 }
