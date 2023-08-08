@@ -43,7 +43,13 @@
     border-radius: 10px;
     margin-top: 1rem;
     font-weight: bold;
+    color: white;
+    background-color: hsl(4, 100%, 67%);
+    border-color: hsl(4, 100%, 67%);
+
+}
+.button:disabled {
     background-color: hsl(234, 29%, 20%);
     border-color: hsl(234, 29%, 20%);
-    color: white;
+   
 }

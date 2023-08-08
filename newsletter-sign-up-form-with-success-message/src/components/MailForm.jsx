@@ -1,3 +1,5 @@
+'use client'
+
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
 import styles from "./components.module.css";
@@ -15,7 +17,7 @@ const MyInput = ({ label, ...props }) => {
     );
 };
 
-export default function MailForm(){
+export default function MailForm(){    
     return(
         <div>
             <Formik 
@@ -30,6 +32,7 @@ export default function MailForm(){
                     setSubmitting(false);
                 }}
             >
+            {(formik) => { return (
                 <Form>
                     <MyInput
                         label="Email address"
@@ -37,9 +40,16 @@ export default function MailForm(){
                         type="email"
                         placeholder="name@email.com"
                     />
-                    <button type="submit" className={styles.button}>Subscribe to monthly newsletter</button>
+                    <button
+                        type="submit" 
+                        className={styles.button}
+                        disabled={!formik.isValid || formik.isSubmitting}
+                    >
+                        Subscribe to monthly newsletter
+                    </button>
+                    
                 </Form>
-
+            )}}
             </Formik>
         </div>
     );
