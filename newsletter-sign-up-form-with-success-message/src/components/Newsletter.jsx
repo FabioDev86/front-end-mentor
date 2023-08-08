@@ -1,6 +1,7 @@
-import Image from "next/image";
-import styles from "./components.module.css";
+'use client'
 
+import styles from "./components.module.css";
+import MailForm from "./MailForm";
 
 export default function Newsletter(){
     return(
@@ -12,6 +13,7 @@ export default function Newsletter(){
                 <li key="2">Measuring to ensure updates are a success</li>
                 <li key="3">And much more!</li>
             </ul>
+            <MailForm />
         </div>
     );
 }
