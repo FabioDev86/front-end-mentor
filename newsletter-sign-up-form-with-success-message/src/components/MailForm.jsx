@@ -1,16 +1,17 @@
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
+import styles from "./components.module.css";
 
 const MyInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
     return (
-      <>
+      <div className={styles.myinput}>
         <label htmlFor={props.id || props.name}>{label}</label>
         <input className="text-input" {...field} {...props} />
         {meta.touched && meta.error ? (
-          <div className="error">{meta.error}</div>
+          <div className={ styles.error }>{meta.error}</div>
         ) : null}
-      </>
+      </div>
     );
 };
 
@@ -22,7 +23,7 @@ export default function MailForm(){
                     email : ""
                 }}
                 validationSchema = {Yup.object({
-                    email: Yup.string().email("Invalid email addresss`").required("Required")
+                    email: Yup.string().email("Invalid email address`").required("Required")
                 })}
                 onSubmit={async (values, { setSubmitting }) => {
                     await new Promise(r => setTimeout(r, 1000));
@@ -36,7 +37,7 @@ export default function MailForm(){
                         type="email"
                         placeholder="name@email.com"
                     />
-                    <button type="submit">Subscribe to monthly newsletter</button>
+                    <button type="submit" className={styles.button}>Subscribe to monthly newsletter</button>
                 </Form>
 
             </Formik>

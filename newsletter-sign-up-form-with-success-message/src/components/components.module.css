@@ -4,6 +4,11 @@
 
 .newsletter {
     padding: 3rem;
+    color: hsl(235, 18%, 26%);
+}
+.newsletter h1 {
+    color: hsl(234, 29%, 20%);
+    font-size: 2.5rem;
 }
 .newsletter li {
     background: url('/icon-list.svg') no-repeat left center;
@@ -11,4 +16,34 @@
     list-style: none;
     margin: 0;
     vertical-align: middle;
+}
+
+.myinput * {
+    display: block;
+}
+.myinput label {
+    font-size: small;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.myinput input {
+    height: 2.5rem;
+    width: 25rem;
+    border-radius: 10px;
+    border: solid gray;
+    padding-left: 1rem;
+}
+.error {
+    color: red;
+    font-size: small;
+}
+.button {
+    height: 3rem;
+    width: 26.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    font-weight: bold;
+    background-color: hsl(234, 29%, 20%);
+    border-color: hsl(234, 29%, 20%);
+    color: white;
 }
