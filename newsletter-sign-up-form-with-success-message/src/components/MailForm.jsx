@@ -3,6 +3,7 @@
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
 import styles from "./components.module.css";
+import { useRouter } from 'next/navigation'
 
 const MyInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
@@ -18,6 +19,7 @@ const MyInput = ({ label, ...props }) => {
 };
 
 export default function MailForm(){    
+    const router = useRouter();
     return(
         <div>
             <Formik 
@@ -27,8 +29,9 @@ export default function MailForm(){
                 validationSchema = {Yup.object({
                     email: Yup.string().email("Invalid email address`").required("Required")
                 })}
-                onSubmit={async (values, { setSubmitting }) => {
+                onSubmit={async (values, { setSubmitting }) => {                    
                     await new Promise(r => setTimeout(r, 1000));
+                    router.push("/Confirmation")
                     setSubmitting(false);
                 }}
             >

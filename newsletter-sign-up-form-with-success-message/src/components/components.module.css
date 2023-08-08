@@ -1,7 +1,14 @@
 .imageContainer img {
     width: fit-content;
-}   
+}
+@media screen and (max-width: 375px) {
+    .imageContainer {
+        margin: 0;
+        padding: 0;
+        width: auto;
+    }
 
+}
 .newsletter {
     padding: 3rem;
     color: hsl(235, 18%, 26%);
@@ -16,6 +23,16 @@
     list-style: none;
     margin: 0;
     vertical-align: middle;
+}
+@media screen and (max-width: 375px)  {
+    .newsletter {
+       padding: 1rem;
+       margin: 0;
+       width: auto;
+    }
+    .newsletter h1 {
+        margin: auto;
+    }
 }
 
 .myinput * {
@@ -46,10 +63,17 @@
     color: white;
     background-color: hsl(4, 100%, 67%);
     border-color: hsl(4, 100%, 67%);
-
 }
 .button:disabled {
     background-color: hsl(234, 29%, 20%);
-    border-color: hsl(234, 29%, 20%);
-   
+    border-color: hsl(234, 29%, 20%);   
+}
+@media screen and (max-width: 390px) {
+    .myinput input {
+        width: 80vw;
+    }
+    .button {
+        width: 87vw;
+    }
+    
 }

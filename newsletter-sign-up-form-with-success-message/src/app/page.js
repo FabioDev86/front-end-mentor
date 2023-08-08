@@ -25,8 +25,7 @@ export default function Home() {
       <Mobile>
         <ImageContainer />
         <Newsletter />
-      </Mobile>
-            
+      </Mobile>            
     </main>
   )
 }
