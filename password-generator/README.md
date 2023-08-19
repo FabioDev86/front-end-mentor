@@ -1,0 +1,2 @@
+# Password generator
+For this app I will use NextJS. It will generate a random password following restrictions provided by the user. It will also evaluate the strength of the password generated with such restrictions.
