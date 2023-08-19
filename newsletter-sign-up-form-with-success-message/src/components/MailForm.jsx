@@ -3,13 +3,14 @@
 import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
 import styles from "./components.module.css";
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation';
+import { useEmail } from "./EmailProvider";
 
 const MyInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
     return (
       <div className={styles.myinput}>
-        <label htmlFor={props.id || props.name}>{label}</label>
+        <label htmlFor={props.id}>{label}</label>
         <input className="text-input" {...field} {...props} />
         {meta.touched && meta.error ? (
           <div className={ styles.error }>{meta.error}</div>
@@ -20,6 +21,7 @@ const MyInput = ({ label, ...props }) => {
 
 export default function MailForm(){    
     const router = useRouter();
+    const {email, changeEmail} = useEmail();
     return(
         <div>
             <Formik 
@@ -30,8 +32,9 @@ export default function MailForm(){
                     email: Yup.string().email("Invalid email address`").required("Required")
                 })}
                 onSubmit={async (values, { setSubmitting }) => {                    
-                    await new Promise(r => setTimeout(r, 1000));
-                    router.push("/Confirmation")
+                    changeEmail(values.email);
+                    alert("EMAIL: " + values.email);
+                    router.push("/Confirmation");
                     setSubmitting(false);
                 }}
             >
@@ -39,6 +42,7 @@ export default function MailForm(){
                 <Form>
                     <MyInput
                         label="Email address"
+                        id="email"
                         name="email"
                         type="email"
                         placeholder="name@email.com"
