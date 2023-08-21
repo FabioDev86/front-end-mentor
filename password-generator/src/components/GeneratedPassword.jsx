@@ -1,7 +1,7 @@
-export default function GeneratedPassword(){
+export default function GeneratedPassword(props){
     return(
         <div>
-            <h2>Here will be displayed the generated password</h2>
+            <h2>Password: {props.password}</h2>
         </div>
     );
 }

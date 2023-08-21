@@ -6,7 +6,7 @@ import Slider from "./generator/Slider";
 import Checkboxes from "./generator/Checkboxes";
 import Strength from "./generator/Strength";
 
-export default function Generator(){
+export default function Generator(props){
 
     //This will be the prop for <Slider>
     const [length, setLength] = useState(15);
@@ -33,7 +33,7 @@ export default function Generator(){
                 numbers = {numbers}
                 symbols = {symbols}
             />
-            <button>Generate</button>
+            <button onClick={() => {props.setPassword("Generated password")}}>Generate</button>
         </div>
     );
 }
