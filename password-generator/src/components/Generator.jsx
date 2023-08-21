@@ -1,12 +1,27 @@
+'use client'
+
+import { useState } from "react";
+
 import Slider from "./generator/Slider";
 import Checkboxes from "./generator/Checkboxes";
 import Strength from "./generator/Strength";
 
 export default function Generator(){
+
+    //Those will be the props for <Checkboxes>
+    const [lowercases, setLowercases] = useState(true);
+    const [uppercases, setUppercases] = useState(false);
+    const [numbers, setNumbers] = useState(false);
+    const [symbols, setSymbols] = useState(false);
     return(
         <div>
             <Slider />
-            <Checkboxes />
+            <Checkboxes 
+                low = {[lowercases, setLowercases]}
+                upp = {[uppercases, setUppercases]}
+                num = {[numbers, setNumbers]}
+                sym = {[symbols, setSymbols]}
+            />
             <Strength />
             <button>Generate</button>
         </div>
