@@ -1,7 +1,5 @@
 'use client'
 
-import { useState } from "react";
-
 export default function Checkboxes(props){
     
     /*
@@ -11,8 +9,6 @@ export default function Checkboxes(props){
     
     The same schema goes for the other props: upp, num and sym
     */
-    
-    const [symbols, setSymbols] = useState(false);
 
     return(
         <div>

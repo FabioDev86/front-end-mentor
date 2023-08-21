@@ -8,6 +8,9 @@ import Strength from "./generator/Strength";
 
 export default function Generator(){
 
+    //This will be the prop for <Slider>
+    const [length, setLength] = useState(15);
+    
     //Those will be the props for <Checkboxes>
     const [lowercases, setLowercases] = useState(true);
     const [uppercases, setUppercases] = useState(false);
@@ -15,7 +18,7 @@ export default function Generator(){
     const [symbols, setSymbols] = useState(false);
     return(
         <div>
-            <Slider />
+            <Slider state = {length} setState = {setLength} />
             <Checkboxes 
                 low = {[lowercases, setLowercases]}
                 upp = {[uppercases, setUppercases]}
