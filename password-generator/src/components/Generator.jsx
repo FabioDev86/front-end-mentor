@@ -16,6 +16,7 @@ export default function Generator(){
     const [uppercases, setUppercases] = useState(false);
     const [numbers, setNumbers] = useState(false);
     const [symbols, setSymbols] = useState(false);
+
     return(
         <div>
             <Slider state = {length} setState = {setLength} />
@@ -25,7 +26,13 @@ export default function Generator(){
                 num = {[numbers, setNumbers]}
                 sym = {[symbols, setSymbols]}
             />
-            <Strength />
+            <Strength 
+                length = {length}
+                lowercases = {lowercases}
+                uppercases = {uppercases}
+                numbers = {numbers}
+                symbols = {symbols}
+            />
             <button>Generate</button>
         </div>
     );
