@@ -23,7 +23,7 @@ export default function Generator(props){
         if(length < 8) setStrength("Weak");
         else if(length < 15) setStrength("Medium");
         else setStrength("Strong"); 
-        props.setPassword("Generated password");
+        props.setPassword("Generated password " + length);
     }
 
     return(
