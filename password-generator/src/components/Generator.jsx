@@ -15,7 +15,16 @@ export default function Generator(props){
     const [lowercases, setLowercases] = useState(true);
     const [uppercases, setUppercases] = useState(false);
     const [numbers, setNumbers] = useState(false);
-    const [symbols, setSymbols] = useState(false);
+    const [symbols, setSymbols] = useState(false);    
+
+    const[strength, setStrength] = useState("");
+
+    function generatePassword(){
+        if(length < 8) setStrength("Weak");
+        else if(length < 15) setStrength("Medium");
+        else setStrength("Strong"); 
+        props.setPassword("Generated password");
+    }
 
     return(
         <div>
@@ -32,13 +41,9 @@ export default function Generator(props){
 
             {/*A component that evalues the strength of the password */}
             <Strength 
-                length = {length}
-                lowercases = {lowercases}
-                uppercases = {uppercases}
-                numbers = {numbers}
-                symbols = {symbols}
+                strength = {strength}
             />
-            <button onClick={() => {props.setPassword("Generated password")}}>Generate</button>
+            <button onClick={generatePassword}>Generate</button>
         </div>
     );
 }
