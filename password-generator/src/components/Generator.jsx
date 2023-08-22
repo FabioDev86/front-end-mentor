@@ -19,13 +19,18 @@ export default function Generator(props){
 
     return(
         <div>
+            {/*The slider will select the length of the password*/}
             <Slider state = {length} setState = {setLength} />
+            
+            {/*A group of 4 checkboxes to choose the complexity of the password*/}
             <Checkboxes 
                 low = {[lowercases, setLowercases]}
                 upp = {[uppercases, setUppercases]}
                 num = {[numbers, setNumbers]}
                 sym = {[symbols, setSymbols]}
             />
+
+            {/*A component that evalues the strength of the password */}
             <Strength 
                 length = {length}
                 lowercases = {lowercases}
