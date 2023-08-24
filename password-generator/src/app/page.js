@@ -1,19 +1,14 @@
 'use client'
 
+import { useRouter } from 'next/navigation';
 import styles from './page.module.css';
-import GeneratedPassword from '@/components/GeneratedPassword';
-import Generator from '@/components/Generator';
-import { useState } from 'react';
 
 export default function Home() {
-  
-  const[password, setPassword] = useState("no password");
-  
+  const router = useRouter();
   return (
     <main className={styles.main}>
-      <h1>Password Generator</h1>
-      <GeneratedPassword password = {password} />
-      <Generator setPassword = {setPassword} />
+      <h1>Welcome!</h1>
+      <button onClick={() => router.push("/generator")}>Generate a password</button>
     </main>
   )
 }

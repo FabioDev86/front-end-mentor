@@ -1,12 +1,15 @@
 'use client'
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
-import Slider from "./generator/Slider";
-import Checkboxes from "./generator/Checkboxes";
-import Strength from "./generator/Strength";
+import Slider from "./generator-components/Slider";
+import Checkboxes from "./generator-components/Checkboxes";
+import Strength from "./generator-components/Strength";
 
 export default function Generator(props){
+
+    const router = useRouter();
 
     //This will be the prop for <Slider>
     const [length, setLength] = useState(15);
@@ -44,6 +47,7 @@ export default function Generator(props){
                 strength = {strength}
             />
             <button onClick={generatePassword}>Generate</button>
+            <button onClick={() => router.push("/")}>Home</button>
         </div>
     );
 }
