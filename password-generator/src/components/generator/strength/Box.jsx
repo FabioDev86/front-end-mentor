@@ -9,28 +9,22 @@ export default function Box(props){
         } else if(props.strength === "Medium"){
             return <div className={styles.medium}>_</div>
         }
-        else {
+        else if(props.strength === "Strong"){
             return <div className={styles.strong}>_</div>
-        }
+        }else return <div>_</div>;
     }
-    if(props.position === "second"){
-        if(props.strength === "Weak"){
-            return <div>_</div>            
-        } else if(props.strength === "Medium"){
+    if(props.position === "second"){         
+        if(props.strength === "Medium"){
             return <div className={styles.medium}>_</div>
         }
-        else {
+        else if(props.strength === "Strong"){
             return <div className={styles.strong}>_</div>
-        }
+        }else return <div>_</div>;
     }
     if(props.position === "third"){
-        if(props.strength === "Weak"){
-            return <div>_</div>            
-        } else if(props.strength === "Medium"){
-            return <div>_</div>
-        }
-        else {
-            return <div className={styles.strong}>_</div>
-        }
+        if(props.strength === "Strong"){
+            return <div className={styles.strong}>_</div>            
+        } 
+        else return <div>_</div>
     }
 }
