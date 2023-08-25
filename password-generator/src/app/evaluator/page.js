@@ -5,6 +5,9 @@ import Box from "../strength/Box";
 import { useState } from "react";
 import { useRouter } from 'next/navigation';
 
+import styles from "./page.module.css"
+
+
 export default function Evaluator(){
     
     const [password, setPassword] = useState("");
@@ -18,7 +21,7 @@ export default function Evaluator(){
         else return setEvaluation("Strong");
     }
     return(
-        <div>
+        <main className={styles.main}> 
             <h1>Evaluation: {evaluation}</h1>
             <input id="psw" placeholder="Insert password" name="password" value={password} onChange={(e) => {setPassword(e.target.value)}}></input>
             <Box position = "first" strength = {evaluation} />
@@ -26,6 +29,6 @@ export default function Evaluator(){
             <Box position = "third" strength = {evaluation} />
             <button onClick={evaluate}>Evaluate</button>
             <button onClick={() => {router.push("/")}}>Back to Home</button>
-        </div>
+        </main>
     );
 }
