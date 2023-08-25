@@ -12,7 +12,8 @@ export default function Evaluator(){
     const router = useRouter();
 
     const evaluate = () => {
-        if(password.length < 8) setEvaluation("Weak");
+        if(password.length < 1)setEvaluation("");
+        else if(password.length < 8) setEvaluation("Weak");
         else if(password.length < 12) setEvaluation("Medium");
         else return setEvaluation("Strong");
     }
