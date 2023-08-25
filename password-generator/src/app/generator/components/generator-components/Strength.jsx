@@ -1,5 +1,5 @@
 
-import Box from "./strength/Box";
+import Box from "../../../strength/Box";
 
 export default function Strength(props){
     
