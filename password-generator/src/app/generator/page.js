@@ -15,10 +15,12 @@ export default function Home() {
   
   return (
     <main className={styles.main}> 
-      <h1>Password Generator</h1>
-      <GeneratedPassword password = {password} />
-      <Generator setPassword = {setPassword} />
-      <button onClick={() => {router.push("/")}}>Back to Home</button>
+      <h1 className={styles.title}>Password Generator</h1>
+      <div className={styles.container}> 
+        <GeneratedPassword password = {password} />
+        <Generator setPassword = {setPassword} />
+        <button onClick={() => {router.push("/")}}>Back to Home</button>
+      </div>
     </main>
   )
 }

@@ -5,7 +5,7 @@ export default function Strength(props){
     
     return(
         <div>
-            <h2>Strength: {props.strength}</h2>            
+            <h1>STRENGTH: {props.strength}</h1>            
             {/*
                 The idea is: 3 div for the strength indicator. Those div will be colored:
                 1 red if the password is weak

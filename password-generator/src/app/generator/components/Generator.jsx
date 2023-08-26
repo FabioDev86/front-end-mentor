@@ -1,4 +1,6 @@
-'use client'
+'use client';
+
+import styles from "./generator.module.css";
 
 import { useState } from "react";
 
@@ -27,7 +29,7 @@ export default function Generator(props){
     }
 
     return(
-        <div>
+        <div className={styles.container}>
             {/*The slider will select the length of the password*/}
             <Slider state = {length} setState = {setLength} />
             

@@ -1,7 +1,18 @@
 .main {
   margin: 0;
   padding:0;
-  background-color: #343333;
+  text-align: center;
   color: #8B8B8B;
+}
+.main h1{
+  font-size: 1.2rem;
+}
+.title {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.container {
+  
+  text-align: left;
 }
 
