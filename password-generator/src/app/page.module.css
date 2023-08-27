@@ -1,6 +1,18 @@
 .main {
   margin: 0;
   padding:0;
-  background-color: white;
+  text-align: center;
+}
+.main h1 {
+  color: #8B8B8B;
+  margin-top: 5rem;
+}
+.main button{
+  width: 12rem;
+  height: 2rem;
+  margin: 1rem;
+  background-color: aquamarine;
+  border: none;
+  color: #0E0E0E;
 }
 
