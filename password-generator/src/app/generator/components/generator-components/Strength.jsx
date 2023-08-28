@@ -1,6 +1,8 @@
 
 import Box from "../../../strength/Box";
 
+import style from "./strength.module.css";
+
 export default function Strength(props){
     
     return(
@@ -12,9 +14,11 @@ export default function Strength(props){
                 2 yellow if the password is medium
                 3 green if the password is strong
             */}
-            <Box position="first" strength={props.strength} />
-            <Box position="second" strength={props.strength} />
-            <Box position="third" strength={props.strength} />
+            <div className={style.boxcontainer}>
+                <Box position="first" strength={props.strength} />
+                <Box position="second" strength={props.strength} />
+                <Box position="third" strength={props.strength} />
+            </div>
         </div>
     );
 }

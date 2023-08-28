@@ -1,0 +1,9 @@
+.boxcontainer {
+    display: flex;
+    gap: 5px;
+}
+.boxcontainer div{
+    border: solid #8B8B8B;
+    width: 10px;
+    height: 1.5rem;
+}
