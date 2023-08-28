@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <h1>Welcome!</h1>
-      <button onClick={() => router.push("/generator")}>Generate a password</button>
+      <button onClick={() => router.push("/generator")}>GENERATE A PASSWORD</button>
       <br></br>
-      <button onClick={() => router.push("/evaluator")}>Evaluate a password</button>
+      <button onClick={() => router.push("/evaluator")}>EVALUATE A PASSWORD</button>
     </main>
   )
 }
