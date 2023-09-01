@@ -7,6 +7,7 @@ import { useState } from "react";
 import Slider from "./generator-components/Slider";
 import Checkboxes from "./generator-components/Checkboxes";
 import Strength from "./generator-components/Strength";
+import zxcvbn from "zxcvbn";
 
 export default function Generator(props){
 
@@ -22,10 +23,9 @@ export default function Generator(props){
     const[strength, setStrength] = useState("");
 
     function generatePassword(){
-        if(length < 8) setStrength("Weak");
-        else if(length < 15) setStrength("Medium");
-        else setStrength("Strong"); 
+        
         props.setPassword("OOOOOOOOOOOOOOO");
+        
     }
 
     return(

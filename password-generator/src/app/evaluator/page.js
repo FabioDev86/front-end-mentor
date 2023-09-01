@@ -2,7 +2,7 @@
 
 import Box from "../strength/Box";
 
-import zxcvbn from "zxcvbn";
+import evaluate from "../utils/evaluate";
 
 import { useState } from "react";
 import { useRouter } from 'next/navigation';
@@ -16,13 +16,6 @@ export default function Evaluator(){
     const [evaluation, setEvaluation] = useState("");
     const router = useRouter();
 
-    const evaluate = () => {
-        const result = zxcvbn(password);
-        if(password.length < 1)setEvaluation("");
-        else if( result.score < 2) setEvaluation("Weak");
-        else if(result.score < 4) setEvaluation("Medium");
-        else return setEvaluation("Strong");
-    }
     return(
         <main className={styles.main}> 
             <h1>Evaluation: {evaluation}</h1>
@@ -30,7 +23,7 @@ export default function Evaluator(){
             <Box position = "first" strength = {evaluation} />
             <Box position = "second" strength = {evaluation} />
             <Box position = "third" strength = {evaluation} />
-            <button onClick={evaluate}>Evaluate</button>
+            <button onClick={() => {setEvaluation(evaluate(password))}}>Evaluate</button>
             <button onClick={() => {router.push("/")}}>Back to Home</button>
         </main>
     );
