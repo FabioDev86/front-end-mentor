@@ -7,7 +7,6 @@ import { useState } from "react";
 import Slider from "./generator-components/Slider";
 import Checkboxes from "./generator-components/Checkboxes";
 import Strength from "./generator-components/Strength";
-import zxcvbn from "zxcvbn";
 import evaluate from "@/app/utils/evaluate";
 
 export default function Generator(props){
@@ -46,11 +45,12 @@ export default function Generator(props){
         if(symbols) pool.push(sym);
 
         for (let i = 0; i < length; i++){
-            newpassword += pool[Math.round(Math.random()*(pool.length-1))].charAt(Math.round(Math.random()*(length - 1))); 
+            const poolIndex = Math.round(Math.random()*(pool.length-1));
+            const charIndex = Math.round(Math.random()*(pool[poolIndex].length - 1));
+            newpassword += pool[poolIndex].charAt(charIndex); 
         }
         props.setPassword(newpassword);
-        setStrength(evaluate(newpassword));
-        
+        setStrength(evaluate(newpassword));        
     }
 
     return( 
