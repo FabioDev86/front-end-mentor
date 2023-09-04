@@ -1,0 +1,17 @@
+.container {
+    text-align: center;
+}
+
+.label {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+}
