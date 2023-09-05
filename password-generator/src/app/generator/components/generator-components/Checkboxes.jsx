@@ -1,4 +1,6 @@
-'use client'
+'use client';
+
+import styles from "./checkboxes.module.css";
 
 export default function Checkboxes(props){
     
@@ -11,7 +13,7 @@ export default function Checkboxes(props){
     */
 
     return(
-        <div>
+        <div className={styles.container}>
             
             <input type="checkbox" id="lowercases" name="lowercases" checked={props.low[0]} onChange={() => {props.low[1](!props.low[0])}}></input>
             <label htmlFor="lowercases">Include Lowercase Letters "{props.low[0] ? "true" : "false"}"</label>
