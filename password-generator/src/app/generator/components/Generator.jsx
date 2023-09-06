@@ -44,13 +44,17 @@ export default function Generator(props){
         if(numbers) pool.push(num);
         if(symbols) pool.push(sym);
 
-        for (let i = 0; i < length; i++){
-            const poolIndex = Math.round(Math.random()*(pool.length-1));
-            const charIndex = Math.round(Math.random()*(pool[poolIndex].length - 1));
-            newpassword += pool[poolIndex].charAt(charIndex); 
+        // If pool.length is 0 then the user hasn't checked any checkbox
+        if(pool.length > 0){
+            for (let i = 0; i < length; i++){
+                const poolIndex = Math.round(Math.random()*(pool.length-1));
+                const charIndex = Math.round(Math.random()*(pool[poolIndex].length - 1));
+                newpassword += pool[poolIndex].charAt(charIndex); 
+            }
+            props.setPassword(newpassword);
+            setStrength(evaluate(newpassword));  
         }
-        props.setPassword(newpassword);
-        setStrength(evaluate(newpassword));        
+              
     }
 
     return( 
