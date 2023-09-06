@@ -1,3 +1,10 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
 .boxcontainer {
     display: flex;
     gap: 5px;

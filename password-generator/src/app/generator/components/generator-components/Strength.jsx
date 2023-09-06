@@ -6,8 +6,8 @@ import style from "./strength.module.css";
 export default function Strength(props){
     
     return(
-        <div>
-            <h1>STRENGTH: {props.strength}</h1>            
+        <div className={style.container}>
+            <h1>STRENGTH:</h1>            
             {/*
                 The idea is: 3 div for the strength indicator. Those div will be colored:
                 1 red if the password is weak
