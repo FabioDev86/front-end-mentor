@@ -32,7 +32,7 @@
     width: 20px;
     margin-top: -3px;
     border-radius: 50%;
-    background-color: aquamarine;
+    background-color: #7fffd4;
     cursor: grab;
     -webkit-appearance: none;
 }

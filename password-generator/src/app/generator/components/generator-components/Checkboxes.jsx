@@ -16,19 +16,19 @@ export default function Checkboxes(props){
         <div className={styles.container}>
             
             <input type="checkbox" id="lowercases" name="lowercases" checked={props.low[0]} onChange={() => {props.low[1](!props.low[0])}}></input>
-            <label htmlFor="lowercases">Include Lowercase Letters "{props.low[0] ? "true" : "false"}"</label>
+            <label htmlFor="lowercases">Include Lowercase Letters</label>
             <br></br>
 
             <input type="checkbox" id="uppercases" name="uppercases" checked={props.upp[0]}  onChange={() => {props.upp[1](!props.upp[0])}}></input>
-            <label htmlFor="uppercases">Include Uppercase Letters "{props.upp[0] ? "true" : "false"}"</label>
+            <label htmlFor="uppercases">Include Uppercase Letters</label>
             <br></br>
 
             <input type="checkbox" id="numbers" name="numbers" checked={props.num[0]}  onChange={() => {props.num[1](!props.num[0])}}></input>
-            <label htmlFor="numbers">Include Numbers "{props.num[0] ? "true" : "false"}"</label>
+            <label htmlFor="numbers">Include Numbers</label>
             <br></br>
 
             <input type="checkbox" id="symbols" name="symbols" checked={props.sym[0]}  onChange={() => {props.sym[1](!props.sym[0])}}></input>
-            <label htmlFor="symbols">Include Symbols "{props.sym[0] ? "true" : "false"}"</label>
+            <label htmlFor="symbols">Include Symbols</label>
         </div>
     );
 }
