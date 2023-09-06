@@ -3,3 +3,11 @@
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
+.container button{
+    width: 14rem;
+    height: 2rem;
+    margin: 1rem;
+    background-color: #7fffd4;
+    border: none;
+    color: #0E0E0E;
+  }
