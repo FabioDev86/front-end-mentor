@@ -1,5 +1,13 @@
 .container {
-    
+    display: grid;
+    grid-template-columns: 1fr 15fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-left: 1rem;
+}
+.container label {
+    place-self: center start;
 }
 .container input {
   /* Those instructions remove useragent style */
@@ -9,6 +17,7 @@
   background-color: #fff;
   /* Not removed via appearance */
   margin: 0;
+  place-self: center end;
 
   color: #8B8B8B;
   background: none;
