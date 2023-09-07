@@ -1,6 +1,23 @@
 .main {
   margin: 0;
   padding:0;
-  background-color: white;
+  text-align: center;
+  background-color: #343333;
+  color: #8B8B8B;
 }
+.main button {
+  width: 14rem;
+  height: 2rem;
+  margin: 1rem;
+  background-color: #7fffd4;
+  border: none;
+  color: #0E0E0E;
+}
+.main input {
+  background-color: #0E0E0E;
+  border: none;
+  height: 1.5rem;
+  width: 12rem;
+}
+
 

@@ -24,6 +24,7 @@ export default function Evaluator(){
             <Box position = "second" strength = {evaluation} />
             <Box position = "third" strength = {evaluation} />
             <button onClick={() => {setEvaluation(evaluate(password))}}>Evaluate</button>
+            <br></br>
             <button onClick={() => {router.push("/")}}>Back to Home</button>
         </main>
     );
