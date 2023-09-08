@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useRouter } from 'next/navigation';
 
 import styles from "./page.module.css"
+import Strength from "../generator/components/generator-components/Strength";
 
 
 export default function Evaluator(){
@@ -18,13 +19,12 @@ export default function Evaluator(){
 
     return(
         <main className={styles.main}> 
-            <h1>Evaluation: {evaluation}</h1>
-            <input id="psw" placeholder="Insert password" name="password" value={password} onChange={(e) => {setPassword(e.target.value)}}></input>
-            <Box position = "first" strength = {evaluation} />
-            <Box position = "second" strength = {evaluation} />
-            <Box position = "third" strength = {evaluation} />
-            <button onClick={() => {setEvaluation(evaluate(password))}}>Evaluate</button>
-            <br></br>
+            <h1 className={styles.title}>Evaluate password</h1>
+            <div className={styles.container}> 
+                <Strength strength = {evaluation} />
+                <input id="psw" placeholder="Insert password" name="password" value={password} onChange={(e) => {setPassword(e.target.value)}}></input>
+                <button onClick={() => {setEvaluation(evaluate(password))}}>Evaluate</button>
+            </div>
             <button onClick={() => {router.push("/")}}>Back to Home</button>
         </main>
     );

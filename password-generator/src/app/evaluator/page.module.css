@@ -2,8 +2,14 @@
   margin: 0;
   padding:0;
   text-align: center;
+  margin-top: 5rem;
+  color: #8B8B8B;
+}
+.container {
   background-color: #343333;
   color: #8B8B8B;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
 }
 .main button {
   width: 14rem;
@@ -12,12 +18,25 @@
   background-color: #7fffd4;
   border: none;
   color: #0E0E0E;
+  margin-bottom: 2rem;
 }
 .main input {
   background-color: #0E0E0E;
+  padding-left: 1rem;
   border: none;
   height: 1.5rem;
-  width: 12rem;
+  width: 13rem;
+  color: #8B8B8B;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.main input:focus {
+  border: solid #7fffd4;
+  outline: none;
+}
+.title{
+  margin-bottom: 2rem;
+  font-size: 1rem;
 }
 
 
