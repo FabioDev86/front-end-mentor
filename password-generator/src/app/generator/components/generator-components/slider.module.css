@@ -19,10 +19,10 @@
     -webkit-appearance: none;
     appearance: none;
     margin-bottom: 1.5rem;
-    width: 90vw;
+    width: 90%;
 }
 .slider::-webkit-slider-runnable-track {
-    width: 90vw;
+    width: 90%;
     height: 0.8rem;
     cursor: grab;
     background: #0E0E0E;
@@ -37,7 +37,7 @@
     -webkit-appearance: none;
 }
 .slider::-moz-range-track {
-    width: 90vw;
+    width: 90%;
     height: 1rem;
     cursor: grab;
     background: #0E0E0E;
@@ -50,7 +50,7 @@
     cursor: grab;
 }
 .slider::-ms-track {
-    width: 90vw;
+    width: 90%;
     height: 1rem;
     cursor: grab;
     background: #0E0E0E;

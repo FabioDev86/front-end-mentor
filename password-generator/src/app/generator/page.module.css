@@ -3,6 +3,8 @@
   padding:0;
   text-align: center;
   color: #8B8B8B;
+  max-width: 412px;
+  margin: auto;
 }
 .main h1{
   font-size: 1.2rem;
@@ -12,7 +14,7 @@
   margin-bottom: 2rem;
 }
 .container {  
-  text-align: left;
+  text-align: center;
 }
 .container button{
   width: 14rem;

@@ -2,8 +2,10 @@
   margin: 0;
   padding:0;
   text-align: center;
+  margin: auto;
   margin-top: 5rem;
   color: #8B8B8B;
+  max-width: 412px;
 }
 .container {
   background-color: #343333;

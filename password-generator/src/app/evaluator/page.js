@@ -22,7 +22,7 @@ export default function Evaluator(){
             <h1 className={styles.title}>Evaluate password</h1>
             <div className={styles.container}> 
                 <Strength strength = {evaluation} />
-                <input id="psw" placeholder="Insert password" name="password" value={password} onChange={(e) => {setPassword(e.target.value)}}></input>
+                <input id="psw" placeholder="Insert password" name="password" value={password} onChange={(e) => {setPassword(e.target.value)}} autocomplete="off" ></input>
                 <button onClick={() => {setEvaluation(evaluate(password))}}>Evaluate</button>
             </div>
             <button onClick={() => {router.push("/")}}>Back to Home</button>

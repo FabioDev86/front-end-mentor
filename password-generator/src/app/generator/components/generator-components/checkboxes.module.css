@@ -8,6 +8,7 @@
 }
 .container label {
     place-self: center start;
+    font-size: 0.75rem;
 }
 .container input {
   /* Those instructions remove useragent style */
