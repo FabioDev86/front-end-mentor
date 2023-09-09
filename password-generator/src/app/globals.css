@@ -4,3 +4,17 @@ html {
   background-image: url("/background.jpg");
   background-color: black;  
 }
+button {
+  width: 14rem;
+  height: 2rem;
+  margin: 1rem;
+  background-color: #7fffd4;
+  border: none;
+  color: #0E0E0E;
+  transition-duration: 0.4s;
+}
+button:hover {
+  background-color: #8B8B8B;
+  color: #7fffd4;
+  cursor: pointer;
+}
