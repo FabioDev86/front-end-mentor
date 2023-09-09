@@ -9,6 +9,10 @@
 .main h1{
   font-size: 1.2rem;
 }
+.main a {
+  color: #8B8B8B;
+  margin-top: 2rem;
+}
 .title {
   margin-top: 2rem;
   margin-bottom: 2rem;
