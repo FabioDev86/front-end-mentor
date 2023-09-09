@@ -21,9 +21,7 @@ export default function Home() {
         <Generator password = {password} setPassword = {setPassword} />
         <button onClick={() => {router.push("/")}}>Back to Home</button>
       </div>
-      <div className={styles.iconlink}>
-        <a target="_blank" href="https://icons8.com/icon/59773/copy">Copy</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-      </div>
+      <a target="_blank" href="https://icons8.com/icon/59773/copy">Copy</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
     </main>
   )
 }
