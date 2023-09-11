@@ -11,6 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon-32x32.png" type='image/png' sizes="any" />
+      </head>
       <body className={josefinsans.className}>{children}</body>
     </html>
   )
