@@ -1,6 +1,6 @@
-import Header from "./main-components/Header";
-import TaskAdder from "./main-components/TaskAdder";
-import TaskList from "./main-components/TaskList";
+import Header from "../main-components/Header";
+import TaskAdder from "../main-components/TaskAdder";
+import TaskList from "../main-components/TaskList";
 
 
 export default function Home() {

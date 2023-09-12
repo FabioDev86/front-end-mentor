@@ -6,6 +6,7 @@
   background-color: hsl(0, 0%, 98%);
   background-image: url(/bg-desktop-light.jpg);
   background-repeat: no-repeat;
+  font-size: 18px;
 }
 @media (prefers-color-scheme: dark) {
   :root {
