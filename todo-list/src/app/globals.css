@@ -2,32 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+html {
   background-color: hsl(0, 0%, 98%);
   background-image: url(/bg-desktop-light.jpg);
   background-repeat: no-repeat;
   font-size: 18px;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    background-color: hsl(235, 21%, 11%);
-    background-image: url(/bg-desktop-dark.jpg);
-    background-repeat: no-repeat;
-  }
+.dark {
+  background-color: hsl(235, 21%, 11%);
+  background-image: url(/bg-desktop-dark.jpg);
+  background-repeat: no-repeat;
 }
 @media (max-width: 375px){
-  :root {
+  html {
     background-color: hsl(0, 0%, 98%);
     background-image: url(/bg-mobile-light.jpg);
     background-repeat: no-repeat;
   }
-}
-@media (max-width: 375px) and (prefers-color-scheme: dark) {
-  :root {
+  .dark {
     background-color: hsl(235, 21%, 11%);
     background-image: url(/bg-mobile-dark.jpg);
     background-repeat: no-repeat;
   }
 }
 
+  
 
