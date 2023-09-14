@@ -11,7 +11,7 @@ function switchTheme (theme) {
 export default function Header(){
     const [theme, setTheme] = useState("light");
     return(
-        <div className="flex gap-[3rem]"> 
+        <div className="flex justify-between"> 
             <h1 className="text-white text-4xl font-extrabold">TODO</h1>
               
             {/*I had to add style={height: "30px"} because for some reason the heigth won't go under 50px otherwise */}
