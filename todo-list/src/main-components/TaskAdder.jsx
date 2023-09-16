@@ -1,20 +1,29 @@
 "use client";
 
+import { useTask } from "@/contexts/TaskContext";
 import Checkbox from "@/utility-components/Checkbox";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function TaskAdder(){
-    const [task, setTask] = useState("");
-    const input = document.getElementById("input");
+    
+    const [localtask, setLocaltask] = useState("");
+    const {setTask} = useTask();
+
+    useEffect(() =>{
+        const input = document.getElementById("input");
+    })
+    
+
     function handleChange(e){
-        setTask(e.target.value);
+        setLocaltask(e.target.value);
     }
     function handleKeyDown(e){
         if(e.key === "Enter"){
-            alert("You added task: "+task);
+            setTask(localtask);
             input.value = "";
         }
     }
+
     return(
         <div className="flex justify-start bg-white dark:bg-slate-800 px-5 py-3 gap-3 rounded-lg">
             <Checkbox />
