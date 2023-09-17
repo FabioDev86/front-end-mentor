@@ -11,8 +11,7 @@ export default function TaskAdder(){
 
     useEffect(() =>{
         const input = document.getElementById("input");
-    })
-    
+    }, []);    
 
     function handleChange(e){
         setLocaltask(e.target.value);
@@ -20,7 +19,7 @@ export default function TaskAdder(){
     function handleKeyDown(e){
         if(e.key === "Enter"){
             setTask(localtask);
-            input.value = "";
+            input.value = "";            
         }
     }
 
