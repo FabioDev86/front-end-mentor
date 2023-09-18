@@ -1,28 +1,21 @@
 "use client";
 import { useTask } from "@/contexts/TaskContext";
-import { useState, useEffect } from "react";
+import Image  from "next/image";
 
-export default function TaskList(){
+export default function TaskList(){    
     
-    const[tasklist, setTasklist] = useState([]);
-    const {task} = useTask();
-    
-    useEffect(() =>{            
-        setTasklist([...tasklist, task]);    
-    }, [task]);    
-
-    const listitem = tasklist.map((item, index) => {
-        return(
-            <li key={index}>{item}</li>
-        );
-    });
+    const {task, setTask} = useTask(); 
 
     return(
         <div>
             <h1>Task List</h1>
-            {listitem.length > 0 ?
+            {task.length > 0  ?
             <ul>
-                {listitem}
+                {task.map((item, index) => {
+                    return(
+                        <li key={index} className="flex">{item}<Image src="/icon-cross.svg" width={20} height={20} style={{height: '20px'}} /></li>
+                    );
+                })}
             </ul>
             :
             <p>No task</p>

@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 
 export default function TaskAdder(){
     
-    const [localtask, setLocaltask] = useState("");
-    const {setTask} = useTask();
+    const [localtask, setLocaltask] = useState(undefined);
+    const {task, setTask} = useTask();
 
     useEffect(() =>{
         const input = document.getElementById("input");
@@ -18,11 +18,10 @@ export default function TaskAdder(){
     }
     function handleKeyDown(e){
         if(e.key === "Enter"){
-            setTask(localtask);
+            setTask([...task, localtask]);
             input.value = "";            
         }
     }
-
     return(
         <div className="flex justify-start bg-white dark:bg-slate-800 px-5 py-3 gap-3 rounded-lg">
             <Checkbox />
