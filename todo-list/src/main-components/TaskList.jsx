@@ -14,7 +14,7 @@ export default function TaskList(){
             <ul>
                 {task.map((item, index) => {
                     return(
-                        <li key={index} className="flex"><Checkbox />{item}<Image src="/icon-cross.svg" width={20} height={20} style={{height: '20px'}} /></li>
+                        <li key={index} className="flex"><Checkbox />{item}<Image src="/icon-cross.svg" alt="cross icon" width={20} height={20} style={{height: '20px'}} /></li>
                     );
                 })}
             </ul>
