@@ -6,9 +6,9 @@ const TaskContext = createContext(undefined);
 
 export const TaskProvider = ({ children }) => {
   const [task, setTask] = useState([]);
-
+  const [completedTasks, setCompletedTasks] = useState([]);
   return (
-    <TaskContext.Provider value={{task, setTask}}>
+    <TaskContext.Provider value={{task, setTask, completedTasks, setCompletedTasks}}>
       {children}
     </TaskContext.Provider>
   );
