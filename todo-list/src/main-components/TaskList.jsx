@@ -1,6 +1,7 @@
 "use client";
 import { useTask } from "@/contexts/TaskContext";
 import Checkbox from "@/utility-components/Checkbox";
+import RemoveTask from "@/utility-components/RemoveTask";
 import Image  from "next/image";
 
 export default function TaskList(){    
@@ -14,16 +15,13 @@ export default function TaskList(){
             <ul>
                 {task.map((item, index) => {
                     return(
-                        <li key={index} className="flex"><Checkbox index={index} />{item}<Image src="/icon-cross.svg" alt="cross icon" width={20} height={20} style={{height: '20px'}} /></li>
+                        <li key={index} className="flex"><Checkbox index={index} />{item}<RemoveTask index={index}/></li>
                     );
                 })}
             </ul>
             :
             <p>No task</p>
             }
-            <h1>Completed Task: {completedTasks[0]}</h1>
-            <h1>Completed Task: {completedTasks[1]}</h1>
-
         </div>
     );
 }
