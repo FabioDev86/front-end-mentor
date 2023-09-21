@@ -15,7 +15,6 @@ export default function TaskList(){
     return(
         <div>
             <h1>Task List</h1>
-            {task.length > 0  ?
             <ul>
                 {task.map((item, index) => {
                     return(
@@ -23,9 +22,23 @@ export default function TaskList(){
                     );
                 })}
             </ul>
-            :
-            <p>No task</p>
-            }
+            <h1>Completed Task</h1>
+            <ul>
+                {completedTasks.map((item, index) => {
+                    return(
+                        <li key={index} className="flex">{item}<RemoveTask task={item}/></li>
+                    );
+                })}
+            </ul>
+            <h1>Active Task</h1>
+            <ul>
+                {activeTasks.map((item, index) => {
+                    return(
+                        <li key={index} className="flex">{item}<RemoveTask task={item}/></li>
+                    );
+                })}
+            </ul>
+
         </div>
     );
 }
