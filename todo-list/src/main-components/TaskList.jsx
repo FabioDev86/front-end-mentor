@@ -1,12 +1,16 @@
 "use client";
+
 import { useTask } from "@/contexts/TaskContext";
 import Checkbox from "@/utility-components/Checkbox";
 import RemoveTask from "@/utility-components/RemoveTask";
-import Image  from "next/image";
 
 export default function TaskList(){    
     
-    const {task, setTask, completedTasks} = useTask(); 
+    const {task, completedTasks, activeTasks} = useTask(); 
+
+    console.log("Tasks: " + task);
+    console.log("Completed Tasks: " + completedTasks);
+    console.log("ActiveTasks: " + activeTasks);
 
     return(
         <div>
@@ -15,7 +19,7 @@ export default function TaskList(){
             <ul>
                 {task.map((item, index) => {
                     return(
-                        <li key={index} className="flex"><Checkbox index={index} />{item}<RemoveTask index={index}/></li>
+                        <li key={index} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
                     );
                 })}
             </ul>

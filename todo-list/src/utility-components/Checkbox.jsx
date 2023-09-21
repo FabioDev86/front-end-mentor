@@ -5,11 +5,23 @@ import { useTask } from "@/contexts/TaskContext";
 export default function Checkbox(props){
 
     const[checked, setChecked] = useState(false);
-    const{ task, completedTasks, setCompletedTasks } = useTask();
+    const{ task, completedTasks, setCompletedTasks, activeTasks, setActiveTasks } = useTask();
 
     const handleClick = () => {
-        if(!props.disabled) setChecked(!checked);
-        setCompletedTasks([...completedTasks, task[props.index]]);
+        if(!props.disabled && !checked){
+            setChecked(!checked);
+            setCompletedTasks([...completedTasks, props.task]);
+            setActiveTasks(activeTasks.filter((item) => {
+                return item != props.task;
+            }))
+            
+        }else if(!props.disabled && checked){
+            setActiveTasks([...activeTasks, props.task]);
+            setCompletedTasks(completedTasks.filter((item) => {
+                return item != props.task;
+            }));
+            setChecked(!checked);
+        }     
     }
 
     return(
