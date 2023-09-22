@@ -6,12 +6,12 @@ const TaskContext = createContext(undefined);
 
 export const TaskProvider = ({ children }) => {
 
-  const [task, setTask] = useState([]);
+  // I nedd only two list. I will combine the general list in TaskList
   const [completedTasks, setCompletedTasks] = useState([]);
   const [activeTasks, setActiveTasks] = useState([]);
   
   return (
-    <TaskContext.Provider value={{task, setTask, completedTasks, setCompletedTasks, activeTasks, setActiveTasks}}>
+    <TaskContext.Provider value={{completedTasks, setCompletedTasks, activeTasks, setActiveTasks}}>
       {children}
     </TaskContext.Provider>
   );

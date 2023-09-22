@@ -5,21 +5,15 @@ import { useTask } from "@/contexts/TaskContext";
 
 export default function RemoveTask(props){
     
-    const{task, setTask, completedTasks, setCompletedTasks, activeTasks, setActiveTasks} = useTask();
+    const{completedTasks, setCompletedTasks, activeTasks, setActiveTasks} = useTask();
 
-    const handleClick = () => {
-
-        //This can be built more efficiently
-        const newTaskList = task.filter((item) => {
-            return item !== props.task;
-        });
+    const handleClick = () =>{
         const newCompletedTaskList = completedTasks.filter((item) => {
             return item !== props.task;
         });
         const newActiveTasks = activeTasks.filter((item) => {
             return item !== props.task;
         });
-        setTask(newTaskList);
         setCompletedTasks(newCompletedTaskList);
         setActiveTasks(newActiveTasks);
     }

@@ -3,20 +3,21 @@
 import { useTask } from "@/contexts/TaskContext";
 import Checkbox from "@/utility-components/Checkbox";
 import RemoveTask from "@/utility-components/RemoveTask";
+import { useEffect, useState } from "react";
 
 export default function TaskList(){    
     
-    const {task, completedTasks, activeTasks} = useTask(); 
+    const {completedTasks, activeTasks} = useTask(); 
+    const [tasks, setTasks] = useState([]);
 
-    console.log("Tasks: " + task);
-    console.log("Completed Tasks: " + completedTasks);
-    console.log("ActiveTasks: " + activeTasks);
-
+    useEffect(() => {
+        setTasks([...completedTasks, ...activeTasks]);
+    }, [activeTasks, completedTasks]);
     return(
         <div>
             <h1>Task List</h1>
             <ul>
-                {task.map((item, index) => {
+                {tasks.map((item, index) => {
                     return(
                         <li key={index} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
                     );

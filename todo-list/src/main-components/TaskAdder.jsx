@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export default function TaskAdder(){
     
     const [localtask, setLocaltask] = useState(undefined);
-    const {task, setTask, activeTasks, setActiveTasks} = useTask();
+    const {activeTasks, setActiveTasks} = useTask();
 
     useEffect(() =>{
         const input = document.getElementById("input");
@@ -18,7 +18,6 @@ export default function TaskAdder(){
     }
     function handleKeyDown(e){
         if(e.key === "Enter"){
-            setTask([...task, localtask]);
             setActiveTasks([...activeTasks, localtask]);
             input.value = "";            
         }
