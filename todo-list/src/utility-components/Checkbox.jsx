@@ -1,12 +1,17 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTask } from "@/contexts/TaskContext";
 
 export default function Checkbox(props){
 
-    const[checked, setChecked] = useState(false);
+    
     const{ completedTasks, setCompletedTasks, activeTasks, setActiveTasks } = useTask();
+    const[checked, setChecked] = useState(completedTasks.includes(props.task)); 
 
+    useEffect(() => {
+        setChecked(completedTasks.includes(props.task));
+    }, [completedTasks]);
+    
     const handleClick = () => {
         if(!props.disabled && !checked){
             setChecked(!checked);

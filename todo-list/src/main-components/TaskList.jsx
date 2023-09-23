@@ -27,7 +27,7 @@ export default function TaskList(){
             <ul>
                 {completedTasks.map((item, index) => {
                     return(
-                        <li key={index} className="flex">{item}<RemoveTask task={item}/></li>
+                        <li key={index} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
                     );
                 })}
             </ul>
@@ -35,7 +35,7 @@ export default function TaskList(){
             <ul>
                 {activeTasks.map((item, index) => {
                     return(
-                        <li key={index} className="flex">{item}<RemoveTask task={item}/></li>
+                        <li key={index} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
                     );
                 })}
             </ul>
