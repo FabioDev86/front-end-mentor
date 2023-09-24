@@ -1,19 +1,27 @@
 "use client";
 
-import { useTask } from "@/contexts/TaskContext";
-import Checkbox from "@/utility-components/Checkbox";
 import List from "@/utility-components/List";
-import RemoveTask from "@/utility-components/RemoveTask";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function TaskList(){    
     
-    return(
+    //This will store the type of the list selected by the user
+    const [type, setType] = useState("general");
+
+    return(    
         <>
-        <List type={"general"} />
-        <List type={"active"} />
-        <List type={"completed"} />
+            <List type={type} />
+            <button onClick={() => {setType("general")}}>All</button>
+            <button onClick={() => {setType("active")}}>Active</button>
+            <button onClick={() => {setType("completed")}}>Completed</button>  
         </>
     );
+        {/*         <>   
+            <List type={type} />
+            <button onClick={() => {setType("general")}}>All</button>
+            <button onClick={() => {setType("active")}}>Active</button>
+            <button onClick={() => {setType("completed")}}>Completed</button>            
+        </> 
+        */}
         
 }

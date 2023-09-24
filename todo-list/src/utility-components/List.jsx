@@ -23,9 +23,9 @@ export default function List(props){
             <div>
                 <h1>Task List</h1>
                 <ul>
-                    {tasks.map((item, index) => {
+                    {tasks.map((item) => {
                         return(
-                            <li key={index} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
+                            <li key={item} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
                         );
                     })}
                 </ul>
@@ -38,9 +38,9 @@ export default function List(props){
             <div>
                 <h1>Active Task</h1>
                 <ul>
-                    {activeTasks.map((item, index) => {
+                    {activeTasks.map((item) => {
                         return(
-                            <li key={index} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
+                            <li key={item} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
                         );
                     })}
                 </ul>
@@ -53,9 +53,9 @@ export default function List(props){
             <div>
                 <h1>Completed Task</h1>
                 <ul>
-                    {completedTasks.map((item, index) => {
+                    {completedTasks.map((item) => {
                         return(
-                            <li key={index} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
+                            <li key={item} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
                         );
                     })}
                 </ul>
