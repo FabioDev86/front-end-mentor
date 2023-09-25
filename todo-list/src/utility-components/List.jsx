@@ -17,45 +17,42 @@ export default function List(props){
         setTasks([...completedTasks, ...activeTasks]);
     }, [activeTasks, completedTasks]);
 
-    //If the user selected the general list I return it
+    //If the user selects the general list I return it
     if(props.type === "general"){
         return(
             <div>
-                <h1>Task List</h1>
-                <ul>
+                <ul className="bg-white dark:bg-slate-800 border-2 rounded-lg p-1">
                     {tasks.map((item) => {
                         return(
-                            <li key={item} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
+                            <li key={item} className="flex justify-between p-2 border-b-2"><div className="flex gap-2"><Checkbox task={item} />{item}</div><RemoveTask task={item} className="justify-self-end"/></li>
                         );
                     })}
                 </ul>
             </div>
         );
     }
-    //If the user selected the active list I return it
+    //If the user selects the active list I return it
     else if(props.type === "active"){
         return(
             <div>
-                <h1>Active Task</h1>
-                <ul>
+                <ul className="bg-white">
                     {activeTasks.map((item) => {
                         return(
-                            <li key={item} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
+                            <li key={item} className="flex justify-between"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
                         );
                     })}
                 </ul>
             </div>
         );
     }
-    //If the user selected the completed list I return it
+    //If the user selects the completed list I return it
     else if(props.type === "completed"){
         return(
             <div>
-                <h1>Completed Task</h1>
-                <ul>
+                <ul className="bg-white">
                     {completedTasks.map((item) => {
                         return(
-                            <li key={item} className="flex"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
+                            <li key={item} className="flex justify-between"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
                         );
                     })}
                 </ul>

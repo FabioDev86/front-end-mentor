@@ -11,17 +11,11 @@ export default function TaskList(){
     return(    
         <>
             <List type={type} />
-            <button onClick={() => {setType("general")}}>All</button>
-            <button onClick={() => {setType("active")}}>Active</button>
-            <button onClick={() => {setType("completed")}}>Completed</button>  
+            <div className="flex justify-around">
+                <button onClick={() => {setType("general")}}>All</button>
+                <button onClick={() => {setType("active")}}>Active</button>
+                <button onClick={() => {setType("completed")}}>Completed</button>
+            </div>  
         </>
-    );
-        {/*         <>   
-            <List type={type} />
-            <button onClick={() => {setType("general")}}>All</button>
-            <button onClick={() => {setType("active")}}>Active</button>
-            <button onClick={() => {setType("completed")}}>Completed</button>            
-        </> 
-        */}
-        
+    );        
 }
