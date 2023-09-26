@@ -12,9 +12,9 @@ export default function TaskList(){
         <>
             <List type={type} />
             <div className="flex justify-around">
-                <button onClick={() => {setType("general")}}>All</button>
-                <button onClick={() => {setType("active")}}>Active</button>
-                <button onClick={() => {setType("completed")}}>Completed</button>
+                <button className={type === "general" ? "text-cyan-500": "text-gray-400 hover:text-black dark:hover:text-white"} onClick={() => {setType("general")}}>All</button>
+                <button className={type === "active" ? "text-cyan-500": "text-gray-400 hover:text-black dark:hover:text-white"} onClick={() => {setType("active")}}>Active</button>
+                <button className={type === "completed" ? "text-cyan-500": "text-gray-400 hover:text-black dark:hover:text-white"} onClick={() => {setType("completed")}}>Completed</button>
             </div>  
         </>
     );        

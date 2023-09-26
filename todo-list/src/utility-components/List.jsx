@@ -35,10 +35,10 @@ export default function List(props){
     else if(props.type === "active"){
         return(
             <div>
-                <ul className="bg-white">
+                <ul className="bg-white dark:bg-slate-800 border-2 rounded-lg p-1">
                     {activeTasks.map((item) => {
                         return(
-                            <li key={item} className="flex justify-between"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
+                            <li key={item} className="flex justify-between p-2 border-b-2"><div className="flex gap-2"><Checkbox task={item} />{item}</div><RemoveTask task={item}/></li>
                         );
                     })}
                 </ul>
@@ -49,10 +49,10 @@ export default function List(props){
     else if(props.type === "completed"){
         return(
             <div>
-                <ul className="bg-white">
+                <ul className="bg-white dark:bg-slate-800 border-2 rounded-lg p-1">
                     {completedTasks.map((item) => {
                         return(
-                            <li key={item} className="flex justify-between"><Checkbox task={item} />{item}<RemoveTask task={item}/></li>
+                            <li key={item} className="flex justify-between p-2 border-b-2"><div className="flex gap-2"><Checkbox task={item} />{item}</div><RemoveTask task={item}/></li>
                         );
                     })}
                 </ul>
