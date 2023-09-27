@@ -7,6 +7,7 @@ html {
   background-image: url(/bg-desktop-light.jpg);
   background-repeat: no-repeat;
   font-size: 18px;
+  
 }
 .dark {
   background-color: hsl(235, 21%, 11%);
