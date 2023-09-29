@@ -20,14 +20,14 @@ export default function TaskList(){
     // 'setCompletedTask' from the Context to remove the completed Tasks if the user
     // clicks on 'Clear Completed' button.
     // 'activeTask' from the Context to count and display the remaining active tasks. 
-    const {setCompletedTasks, activeTasks} = useTask();
+    const {setCompletedTasks, activeTasks, completedTasks} = useTask();
 
     if(isClient){
     return(    
         <div> 
             <MediaQuery minWidth={376}>
-                <List type={type} />
-                <div className="flex justify-around">
+                {activeTasks.length + completedTasks.length > 0 ? <List type={type} /> : <></>}
+                <div className="flex justify-around bg-white dark:bg-slate-800 border-2 rounded-lg p-2">
                     <p className="text-gray-400">{activeTasks.length} items left</p>
                     <button className={type === "general" ? "text-cyan-500": "text-gray-400 hover:text-black dark:hover:text-white"} onClick={() => {setType("general")}}>All</button>
                     <button className={type === "active" ? "text-cyan-500": "text-gray-400 hover:text-black dark:hover:text-white"} onClick={() => {setType("active")}}>Active</button>
@@ -36,8 +36,8 @@ export default function TaskList(){
                 </div>
             </MediaQuery>
             <MediaQuery maxWidth={375}>
-                <List type={type} />
-                <div className="flex justify-between">
+                {activeTasks.length + completedTasks.length > 0 ? <List type={type} /> : <></>}
+                <div className="flex justify-between bg-white dark:bg-slate-800 border-2 rounded-lg p-2">
                     <p className="text-gray-400">{activeTasks.length} items left</p>
                     <button className="text-gray-400 hover:text-black dark:hover:text-white" onClick={() =>{setCompletedTasks([])}}>Clear Completed</button>
                 </div>
