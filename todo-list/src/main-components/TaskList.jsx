@@ -28,7 +28,7 @@ export default function TaskList(){
             <MediaQuery minWidth={376}>
                 <List type={type} />
                 <div className="flex justify-around">
-                    <p>{activeTasks.length} items left</p>
+                    <p className="text-gray-400">{activeTasks.length} items left</p>
                     <button className={type === "general" ? "text-cyan-500": "text-gray-400 hover:text-black dark:hover:text-white"} onClick={() => {setType("general")}}>All</button>
                     <button className={type === "active" ? "text-cyan-500": "text-gray-400 hover:text-black dark:hover:text-white"} onClick={() => {setType("active")}}>Active</button>
                     <button className={type === "completed" ? "text-cyan-500": "text-gray-400 hover:text-black dark:hover:text-white"} onClick={() => {setType("completed")}}>Completed</button>
@@ -37,8 +37,8 @@ export default function TaskList(){
             </MediaQuery>
             <MediaQuery maxWidth={375}>
                 <List type={type} />
-                <div>
-                    <p>{activeTasks.length} items left</p>
+                <div className="flex justify-between">
+                    <p className="text-gray-400">{activeTasks.length} items left</p>
                     <button className="text-gray-400 hover:text-black dark:hover:text-white" onClick={() =>{setCompletedTasks([])}}>Clear Completed</button>
                 </div>
                 <div className="flex justify-around">

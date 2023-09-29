@@ -24,7 +24,7 @@ export default function List(props){
                 <ul className="bg-white dark:bg-slate-800 border-2 rounded-lg p-1">
                     {tasks.map((item) => {
                         return(
-                            <li key={item} className="flex justify-between p-2 border-b-2"><div className="flex gap-2"><Checkbox task={item} />{item}</div><RemoveTask task={item} className="justify-self-end"/></li>
+                            <li key={item} className="flex justify-between p-2 border-b-2 text-gray-600 dark:text-gray-300"><div className="flex gap-2"><Checkbox task={item} />{item}</div><RemoveTask task={item} className="justify-self-end"/></li>
                         );
                     })}
                 </ul>
