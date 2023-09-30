@@ -23,8 +23,12 @@ export default function List(props){
             <div>
                 <ul className="bg-white dark:bg-slate-800 border-2 rounded-lg p-1">
                     {tasks.map((item) => {
+
+                        {/*I have to style the list item differently if item is in active or completed list*/}
+                        const classes = activeTasks.includes(item) ? "flex justify-between p-2 border-b-2 text-gray-600 dark:text-gray-300" : "flex justify-between p-2 border-b-2 text-gray-300 line-through dark:text-gray-600";
+                        
                         return(
-                            <li key={item} className="flex justify-between p-2 border-b-2 text-gray-600 dark:text-gray-300"><div className="flex gap-2"><Checkbox task={item} />{item}</div><RemoveTask task={item} className="justify-self-end"/></li>
+                            <li key={item} className={classes}><div className="flex gap-2"><Checkbox task={item} />{item}</div><RemoveTask task={item} className="justify-self-end"/></li>
                         );
                     })}
                 </ul>
@@ -38,7 +42,7 @@ export default function List(props){
                 <ul className="bg-white dark:bg-slate-800 border-2 rounded-lg p-1">
                     {activeTasks.map((item) => {
                         return(
-                            <li key={item} className="flex justify-between p-2 border-b-2"><div className="flex gap-2"><Checkbox task={item} />{item}</div><RemoveTask task={item}/></li>
+                            <li key={item} className="flex justify-between p-2 border-b-2 text-gray-600 dark:text-gray-300"><div className="flex gap-2"><Checkbox task={item} />{item}</div><RemoveTask task={item}/></li>
                         );
                     })}
                 </ul>
@@ -52,7 +56,7 @@ export default function List(props){
                 <ul className="bg-white dark:bg-slate-800 border-2 rounded-lg p-1">
                     {completedTasks.map((item) => {
                         return(
-                            <li key={item} className="flex justify-between p-2 border-b-2"><div className="flex gap-2"><Checkbox task={item} />{item}</div><RemoveTask task={item}/></li>
+                            <li key={item} className="flex justify-between p-2 border-b-2 text-gray-300 line-through dark:text-gray-600"><div className="flex gap-2"><Checkbox task={item} />{item}</div><RemoveTask task={item}/></li>
                         );
                     })}
                 </ul>
