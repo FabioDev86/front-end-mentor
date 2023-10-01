@@ -30,10 +30,8 @@ export default function TaskList(){
         <div>
             {/*This will be rendered on Desktop and Tablet */} 
             <MediaQuery minWidth={376}>
-
-                {/*If both active and completed list are empty I will not render the List component */}
-                {activeTasks.length + completedTasks.length > 0 ? <List type={type} /> : <></>}
-                <div className="flex justify-around bg-white dark:bg-slate-800 border-2 rounded-lg p-2 mt-3">
+                <List type={type} />
+                <div className="flex justify-around bg-white dark:bg-slate-800 rounded-lg p-2 mt-3">
                     <p className="text-gray-400 text-sm">{activeTasks.length} items left</p>
                     <button className={type === "general" ? "text-cyan-500 text-sm": "text-sm text-gray-400 hover:text-black dark:hover:text-white"} onClick={() => {setType("general")}}>All</button>
                     <button className={type === "active" ? "text-cyan-500 text-sm": "text-sm text-gray-400 hover:text-black dark:hover:text-white"} onClick={() => {setType("active")}}>Active</button>
@@ -44,10 +42,8 @@ export default function TaskList(){
 
             {/*This will be rendered on Mobile */}
             <MediaQuery maxWidth={375}>
-
-                {/*If both active and completed list are empty I will not render the List component */}
-                {activeTasks.length + completedTasks.length > 0 ? <List type={type} /> : <></>}
-                <div className="flex justify-between bg-white dark:bg-slate-800 border-2 rounded-lg p-2 mt-3">
+                <List type={type} /> 
+                <div className="flex justify-between bg-white dark:bg-slate-800 rounded-lg p-3 mt-3">
                     <p className="text-gray-400 text-sm">{activeTasks.length} items left</p>
                     <button className="text-sm text-gray-400 hover:text-black dark:hover:text-white" onClick={() =>{setCompletedTasks([])}}>Clear Completed</button>
                 </div>

@@ -26,7 +26,7 @@ export default function List(props){
                     {tasks.map((item) => {
 
                         {/*I have to style the list item differently if item is in active or completed list*/}
-                        const classes = activeTasks.includes(item) ? "flex justify-between p-2 bg-white dark:bg-slate-800 border-solid border-2 text-gray-600 dark:text-gray-300" : "flex justify-between p-2 bg-white dark:bg-slate-800 border-b-2 text-gray-300 line-through dark:text-gray-600";
+                        const classes = activeTasks.includes(item) ? "flex justify-between p-2 bg-white dark:bg-slate-800 text-gray-600 dark:text-gray-300" : "flex justify-between p-2 bg-white dark:bg-slate-800 text-gray-300 line-through dark:text-gray-600";
 
                         {/*I have to style the border differently in relation to the position of the element*/}
                         const border_classes =
@@ -51,7 +51,7 @@ export default function List(props){
                     {activeTasks.map((item) => {
 
                         {/*I have to style the list item differently if item is in active or completed list*/}
-                        const classes = "flex justify-between p-2 bg-white dark:bg-slate-800 border-solid border-2 text-gray-600 dark:text-gray-300";
+                        const classes = "flex justify-between p-2 bg-white dark:bg-slate-800 text-gray-600 dark:text-gray-300";
 
                         {/*I have to style the border differently in relation to the position of the element*/}
                         const border_classes =
@@ -76,7 +76,7 @@ export default function List(props){
                     {completedTasks.map((item) => {
                         
                         {/*I have to style the list item differently if item is in active or completed list*/}
-                        const classes = "flex justify-between p-2 bg-white dark:bg-slate-800 border-b-2 text-gray-300 line-through dark:text-gray-600";
+                        const classes = "flex justify-between p-2 bg-white dark:bg-slate-800 text-gray-300 line-through dark:text-gray-600";
 
                         {/*I have to style the border differently in relation to the position of the element*/}
                         const border_classes =

@@ -17,7 +17,7 @@ export default function TaskAdder(){
         setLocaltask(e.target.value);
     }
     function handleKeyDown(e){
-        if(e.key === "Enter"){
+        if(e.key === "Enter" && !activeTasks.includes(localtask)){
             setActiveTasks([...activeTasks, localtask]);
             input.value = "";            
         }
