@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export default function TaskAdder(){
     
     const [localtask, setLocaltask] = useState(undefined);
-    const {activeTasks, setActiveTasks} = useTask();
+    const {activeTasks, setActiveTasks, completedTasks} = useTask();
 
     useEffect(() =>{
         const input = document.getElementById("input");
@@ -17,7 +17,8 @@ export default function TaskAdder(){
         setLocaltask(e.target.value);
     }
     function handleKeyDown(e){
-        if(e.key === "Enter" && !activeTasks.includes(localtask)){
+        // I avoid duplicate task checking if the same string is already in active or completed list
+        if(e.key === "Enter" && !((activeTasks.includes(localtask)) || completedTasks.includes(localtask))){
             setActiveTasks([...activeTasks, localtask]);
             input.value = "";            
         }

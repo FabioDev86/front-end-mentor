@@ -13,7 +13,6 @@ export default function Header(){
     return(
         <div className="flex justify-between"> 
             <h1 className="text-white text-4xl font-extrabold">TODO</h1>
-              
             {/*I had to add style={height: "30px"} because for some reason the heigth won't go under 50px otherwise */}
             {theme === "light" ? 
             <Image
