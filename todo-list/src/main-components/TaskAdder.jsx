@@ -18,7 +18,7 @@ export default function TaskAdder(){
     }
     function handleKeyDown(e){
         // I avoid duplicate task checking if the same string is already in active or completed list
-        if(e.key === "Enter" && !((activeTasks.includes(localtask)) || completedTasks.includes(localtask))){
+        if(e.key === "Enter" && localtask !==undefined && !((activeTasks.includes(localtask)) || completedTasks.includes(localtask))){
             setActiveTasks([...activeTasks, localtask]);
             input.value = "";            
         }
@@ -27,6 +27,7 @@ export default function TaskAdder(){
         <div className="flex justify-start bg-white dark:bg-slate-800 px-5 py-3 gap-3 rounded-lg">
             <Checkbox disabled = {true}/>
             <input id="input" placeholder="Create a new to do..." onChange={handleChange} onKeyDown={handleKeyDown} className="focus:outline-none border-none text-slate-800 dark:placeholder:text-slate-600 w-full dark:text-slate-400 dark:bg-slate-800 "/>
+            <h1 className="text-slate-800 dark:text-slate-600">+</h1>
         </div>
     );
 }
