@@ -1,9 +1,15 @@
+'use client'
+
+import { useIp } from "@/util/IpContext";
+
 export default function Info(){
+
+    const {ip_address} = useIp();
     return(
         <div className="flex">
             <div className="bg-white rounded-l-lg p-10 px-[3rem] text-center ">
                 <h1 className="text-slate-400 font-bold pb-3 text-sm">IP ADDRESS</h1>
-                <p className="font-bold text-slate-800 text-2xl">192.234.567.123</p>
+                <p className="font-bold text-slate-800 text-2xl">{ip_address}</p>
             </div>
             <div className="bg-white p-10 px-[3rem] text-center">
                 <h1 className="text-slate-400 font-bold pb-3 text-sm">LOCATION</h1>
