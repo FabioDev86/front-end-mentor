@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Info from "@/components/Info";
+import Map from "@/components/Map";
 import { IpProvider } from "@/util/IpContext";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <IpProvider>
         <Header />
         <Info />
+        <Map />
       </IpProvider>
     </main>
   )
