@@ -12,7 +12,7 @@ export default function Info(){
         fetch("http://ip-api.com/json/" + ip_address)
           .then((response) => response.json())
           .then((data) => setInfo(data));
-      };
+    };
     useEffect(() => {
         fetchData();
     }, [ip_address]);
