@@ -6,7 +6,9 @@ import { useEffect, useState } from "react";
 export default function Info(){
 
     const{ip_address} = useIp();
-    const[info, setInfo] = useState({});
+    const[info, setInfo] = useState({
+        
+    });
     
     const fetchData = () => {
         fetch("http://ip-api.com/json/" + ip_address)

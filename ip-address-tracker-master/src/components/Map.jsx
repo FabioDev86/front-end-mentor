@@ -31,6 +31,7 @@ export default function Map() {
 
   return(
     <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} style={{height: 800, width: "100%"}}>
+      {/*MyComponent is used only for the useMap hook in order to change dinamically the view*/}
       <MyComponent goTo = {info} />
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
