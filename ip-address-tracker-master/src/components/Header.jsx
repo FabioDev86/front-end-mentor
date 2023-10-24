@@ -27,7 +27,7 @@ export default function Header(){
     }
 
     return(
-        <div className='flex flex-col items-center gap-10 p-10'> 
+        <div className='flex flex-col items-center gap-10 p-[4rem]'> 
             <h1 className="text-white text-3xl font-bol">IP Address Tracker</h1>
             <form className='flex flex-col' onSubmit={handleSubmit}>                
                 <div className='flex'>
