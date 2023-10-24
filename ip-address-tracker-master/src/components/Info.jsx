@@ -19,8 +19,9 @@ export default function Info(){
         fetchData();
     }, [ip_address]);
 
+    // Break points: max 950, 
     return(
-        <div className="flex z-[1000] absolute top-[15rem]">
+        <div className="flex max-[950px]:grid max-[950px]:grid-cols-2 max-[660px]:grid-cols-1 z-[1000] absolute top-[15rem]">
             <div className="bg-white rounded-l-lg p-5 px-[3rem] text-center">
                 <h1 className="text-slate-400 font-bold pb-3 text-sm">IP ADDRESS</h1>
                 <p className="font-bold text-slate-800 text-2xl">{ip_address}</p>
