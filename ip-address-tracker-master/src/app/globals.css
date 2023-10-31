@@ -7,10 +7,4 @@ html {
     background-repeat: no-repeat;
     background-color: antiquewhite;
 }
-@media (max-width: 375px){
-    html {
-        background-image: url("/pattern-bg-mobile.png");
-        background-repeat: no-repeat;
-    }
-}
 

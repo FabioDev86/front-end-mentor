@@ -1,17 +1,18 @@
 'use client'
 
-import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet';
+import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useIp } from "@/util/IpContext";
 import { useState, useEffect } from 'react';
 import { useMap } from 'react-leaflet/hooks';
+import L, { icon } from 'leaflet';
 
 function MyComponent(props) {
   const map = useMap();
   try{
-    map.flyTo([props.goTo.lat, props.goTo.lon], map.getZoom())
+    map.flyTo([props.goTo.lat, props.goTo.lon], map.getZoom());
   }
-  catch(error){}
+  catch(error){console.log(error)}
   return null
 }
 
@@ -19,15 +20,23 @@ function MyComponent(props) {
 export default function Map() {
   const{ip_address} = useIp();
   const[info, setInfo] = useState(); 
+  const [lat, setLat] = useState(45.4978);
+  const [lon, setLon] = useState(-73.5485);
 
   const fetchData = () => {
       fetch("http://ip-api.com/json/" + ip_address)
           .then((response) => response.json())
-          .then((data) => {setInfo(data); console.log(data);});
+          .then((data) => {setInfo(data); setLat(data.lat); setLon(data.lon)});
   };
   useEffect(() => {
       fetchData();
   }, [ip_address]);
+
+  const myIcon = L.icon({
+    iconUrl: 'icon-location.svg',
+    iconSize:     [38, 95], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location    
+  });
 
   return(
     
@@ -38,9 +47,8 @@ export default function Map() {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />      
-        <Marker position={[45.4978, -73.5485]}>
+        <Marker position={[lat, lon]} icon={myIcon}>
         </Marker>
-      </MapContainer>
-    
+      </MapContainer>    
   );
 }
