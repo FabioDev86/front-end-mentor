@@ -34,7 +34,7 @@ export default function Map() {
 
   const myIcon = L.icon({
     iconUrl: 'icon-location.svg',
-    iconSize:     [38, 95], // size of the icon
+    iconSize:     [38, 55], // size of the icon
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location    
   });
 
