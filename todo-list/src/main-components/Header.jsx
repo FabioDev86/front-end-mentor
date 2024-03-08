@@ -6,6 +6,7 @@ import { useState } from "react";
 function switchTheme (theme) {
     // This function has to set the class of the html element to dark
     theme === "light" ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');
+    console.log(document.documentElement.classList);
 }
 
 export default function Header(){

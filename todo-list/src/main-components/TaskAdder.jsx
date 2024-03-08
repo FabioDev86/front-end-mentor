@@ -23,10 +23,17 @@ export default function TaskAdder(){
             input.value = "";            
         }
     }
+    function handleClick(e){
+        if(localtask !==undefined && !((activeTasks.includes(localtask)) || completedTasks.includes(localtask))){
+            setActiveTasks([...activeTasks, localtask]);
+            input.value = "";            
+        }
+    }
     return(
         <div className="flex justify-start bg-white dark:bg-slate-800 px-5 py-3 gap-3 rounded-lg">
             <Checkbox disabled = {true}/>
             <input id="input" placeholder="Create a new to do..." onChange={handleChange} onKeyDown={handleKeyDown} className="focus:outline-none border-none text-slate-800 dark:placeholder:text-slate-600 w-full dark:text-slate-400 dark:bg-slate-800 "/>
+            <button className="text-sm text-gray-400 hover:text-black dark:hover:text-white" onClick={handleClick}>Add</button>
         </div>
     );
 }
