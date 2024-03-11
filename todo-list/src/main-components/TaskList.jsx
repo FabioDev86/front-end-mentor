@@ -29,7 +29,7 @@ export default function TaskList(){
     return(    
         <div>
             {/*This will be rendered on Desktop and Tablet */} 
-            <MediaQuery minWidth={376}>
+            <MediaQuery minWidth={501}>
                 <List type={type} />
                 <div className="flex justify-around bg-white dark:bg-slate-800 rounded-lg p-3 mt-3">
                     <p className="text-gray-400 text-sm">{activeTasks.length} items left</p>
@@ -41,7 +41,7 @@ export default function TaskList(){
             </MediaQuery>
 
             {/*This will be rendered on Mobile */}
-            <MediaQuery maxWidth={375}>
+            <MediaQuery maxWidth={500}>
                 <List type={type} /> 
                 <div className="flex justify-between bg-white dark:bg-slate-800 rounded-lg p-3 mt-3">
                     <p className="text-gray-400 text-sm">{activeTasks.length} items left</p>

@@ -14,16 +14,21 @@ html {
   background-image: url(/bg-desktop-dark.jpg);
   background-repeat: no-repeat;
 }
-@media (max-width: 375px){
+@media (max-width: 500px){
   html {
-    background-color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 85%);
     background-image: url(/bg-mobile-light.jpg);
     background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100%;
   }
   .dark {
     background-color: hsl(235, 21%, 11%);
     background-image: url(/bg-mobile-dark.jpg);
     background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100%;
   }
 }
 
