@@ -2,7 +2,7 @@
 .result{
     text-align: center;
     background-color: hsl(241, 81%, 54%);
-    padding: 3rem;
+    
     width: 18rem;
     height: 23rem;
     border-radius: 10%;
@@ -40,11 +40,9 @@
 /*SUMMARY COMPONENT*/
 .summary{
     background-color: white;
-    padding: 2rem;
     width: 19rem;
     height: 25rem;
-    border-radius: 10%;
-    
+    border-radius: 10%;    
 }
 @media screen and (min-width: 415px){
     .summary{
