@@ -1,42 +1,51 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#F4D03F] flex items-center justify-center p-6">
-      {/* Questa è la nostra Card */}
-      <article className="bg-white p-6 rounded-2xl border border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] max-w-[384px]">
+    // 1. IL CONTENITORE ESTERNO: Centra la card e imposta lo sfondo giallo
+    <main className="min-h-screen bg-fm-yellow flex items-center justify-center p-6 font-figtree">
+      
+      {/* 2. LA CARD: Sfondo bianco, bordo nero e l'ombra "brutalista" che abbiamo creato */}
+      <article className="bg-white p-6 rounded-[20px] border border-fm-black shadow-brutal max-w-[384px] flex flex-col gap-6">
         
-        {/* Immagine Principale ottimizzata */}
-        <div className="rounded-xl overflow-hidden mb-6">
+        {/* 3. L'IMMAGINE DI TESTATA: Usiamo il componente Image di Next.js */}
+        <div className="relative w-full rounded-[10px] overflow-hidden">
           <Image 
             src="/illustration-article.svg" 
-            alt="HTML & CSS foundations" 
-            width={336} // Dimensioni basate sul design
+            alt="Illustrazione articolo" 
+            width={336} 
             height={200}
-            className="w-full h-auto"
-            priority // Carica subito questa immagine essendo sopra la piega
+            className="w-full h-auto object-cover"
+            priority 
           />
         </div>
 
-        {/* Contenuto Testuale */}
+        {/* 4. IL CONTENUTO TESTUALE: Organizzato in una colonna con spaziature precise */}
         <div className="flex flex-col gap-3">
-          <span className="bg-[#F4D03F] font-extrabold py-1 px-3 rounded text-sm w-fit">
+          
+          {/* Il Badge "Learning" */}
+          <span className="bg-fm-yellow font-extrabold py-1 px-3 rounded-[4px] text-[14px] w-fit">
             Learning
           </span>
           
-          <p className="text-sm font-medium">Published 21 Dec 2023</p>
+          {/* La Data */}
+          <p className="text-[14px] font-medium text-fm-black">
+            Published 21 Dec 2023
+          </p>
           
-          <h1 className="text-2xl font-extrabold hover:text-[#F4D03F] cursor-pointer transition-colors">
+          {/* Il Titolo con effetto hover */}
+          <h1 className="text-2xl font-extrabold cursor-pointer hover:text-fm-yellow transition-colors duration-200">
             HTML & CSS foundations
           </h1>
           
-          <p className="text-gray-500 leading-relaxed">
+          {/* La Descrizione */}
+          <p className="text-fm-grey text-[16px] leading-relaxed font-medium">
             These languages are the backbone of every website, defining structure, content, and presentation.
           </p>
         </div>
 
-        {/* Footer con Avatar ottimizzato */}
-        <div className="flex items-center gap-3 mt-6">
+        {/* 5. IL FOOTER: Foto dell'autore e nome */}
+        <div className="flex items-center gap-3">
           <Image 
             src="/image-avatar.webp" 
             alt="Greg Hooper" 

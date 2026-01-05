@@ -1,2 +1,21 @@
 @import "tailwindcss";
 
+@theme {
+  /* Definiamo il giallo ufficiale */
+  --color-fm-yellow: hsl(47, 88%, 63%);
+  --color-fm-white: hsl(0, 0%, 100%);
+  --color-fm-grey: hsl(0, 0%, 50%);
+  --color-fm-black: hsl(0, 0%, 7%);
+
+  /* Definiamo il font personalizzato */
+  --font-figtree: var(--font-figtree), ui-sans-serif, system-ui;
+
+  /* Definiamo l'ombra "brutalista" */
+  --shadow-brutal: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+}
+
+@layer base {
+  body {
+    @apply font-figtree antialiased text-fm-black;
+  }
+}
